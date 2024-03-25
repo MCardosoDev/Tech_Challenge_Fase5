@@ -2080,7 +2080,7 @@ def panelDash():
         
 def main():
     st.set_page_config(page_title='Passos Mágicos', page_icon=':bar_chart:', layout='wide')
-    logo_url = 'Images/logo.png'
+    logo_url = './Images/logo.png'
 
     st.sidebar.image(logo_url, width=250)
     view = st.sidebar.radio(
