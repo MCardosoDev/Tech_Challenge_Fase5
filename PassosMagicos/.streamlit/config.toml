@@ -1,0 +1,18 @@
+[theme]
+primaryColor="#0600FF"
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="#BED5EF"
+textColor="#000000"
+font="sans serif"
+
+[server]
+enableCORS = true
+enableXsrfProtection = true
+maxUploadSize = 2000
+maxMessageSize = 2000
+enableWebsocketCompression = false
+enableStaticServing = false
+
+[client]
+showErrorDetails = true
+toolbarMode = "auto"

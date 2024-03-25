@@ -1,0 +1,549 @@
+﻿Medida;Etapa_ensino;Ano;Docentes
+Total;Educação Básica;2007;636
+Total;Educação Básica;2008;646
+Total;Educação Básica;2009;689
+Total;Educação Básica;2010;746
+Total;Educação Básica;2011;770
+Total;Educação Básica;2012;812
+Total;Educação Básica;2013;833
+Total;Educação Básica;2014;876
+Total;Educação Básica;2015;853
+Total;Educação Básica;2016;863
+Total;Educação Básica;2017;870
+Total;Educação Básica;2018;870
+Total;Educação Básica;2019;831
+Total;Educação Básica;2020;832
+Total;Educação Básica;2021;844
+Total;Educação Básica;2022;934
+Total;Educação Infantil;2007;77
+Total;Educação Infantil;2008;81
+Total;Educação Infantil;2009;98
+Total;Educação Infantil;2010;153
+Total;Educação Infantil;2011;185
+Total;Educação Infantil;2012;198
+Total;Educação Infantil;2013;230
+Total;Educação Infantil;2014;236
+Total;Educação Infantil;2015;235
+Total;Educação Infantil;2016;264
+Total;Educação Infantil;2017;278
+Total;Educação Infantil;2018;269
+Total;Educação Infantil;2019;256
+Total;Educação Infantil;2020;245
+Total;Educação Infantil;2021;237
+Total;Educação Infantil;2022;274
+Total;Ensino Fundamental;2007;503
+Total;Ensino Fundamental;2008;520
+Total;Ensino Fundamental;2009;539
+Total;Ensino Fundamental;2010;543
+Total;Ensino Fundamental;2011;539
+Total;Ensino Fundamental;2012;555
+Total;Ensino Fundamental;2013;538
+Total;Ensino Fundamental;2014;575
+Total;Ensino Fundamental;2015;552
+Total;Ensino Fundamental;2016;557
+Total;Ensino Fundamental;2017;550
+Total;Ensino Fundamental;2018;558
+Total;Ensino Fundamental;2019;534
+Total;Ensino Fundamental;2020;558
+Total;Ensino Fundamental;2021;578
+Total;Ensino Fundamental;2022;594
+Total;Ensino Médio;2007;227
+Total;Ensino Médio;2008;230
+Total;Ensino Médio;2009;243
+Total;Ensino Médio;2010;256
+Total;Ensino Médio;2011;249
+Total;Ensino Médio;2012;258
+Total;Ensino Médio;2013;253
+Total;Ensino Médio;2014;276
+Total;Ensino Médio;2015;265
+Total;Ensino Médio;2016;254
+Total;Ensino Médio;2017;248
+Total;Ensino Médio;2018;256
+Total;Ensino Médio;2019;258
+Total;Ensino Médio;2020;251
+Total;Ensino Médio;2021;271
+Total;Ensino Médio;2022;278
+Total;Educação Profissional;2020;12
+Total;Educação Profissional;2021;16
+Total;Educação Profissional;2022;15
+Total;Educação de Jovens e Adultos - EJA;2007;128
+Total;Educação de Jovens e Adultos - EJA;2008;115
+Total;Educação de Jovens e Adultos - EJA;2009;98
+Total;Educação de Jovens e Adultos - EJA;2010;110
+Total;Educação de Jovens e Adultos - EJA;2011;107
+Total;Educação de Jovens e Adultos - EJA;2012;91
+Total;Educação de Jovens e Adultos - EJA;2013;85
+Total;Educação de Jovens e Adultos - EJA;2014;68
+Total;Educação de Jovens e Adultos - EJA;2015;50
+Total;Educação de Jovens e Adultos - EJA;2016;45
+Total;Educação de Jovens e Adultos - EJA;2017;49
+Total;Educação de Jovens e Adultos - EJA;2018;36
+Total;Educação de Jovens e Adultos - EJA;2019;24
+Total;Educação de Jovens e Adultos - EJA;2020;19
+Total;Educação de Jovens e Adultos - EJA;2021;31
+Total;Educação de Jovens e Adultos - EJA;2022;52
+Educação Básica;Educação Básica;2007;636
+Educação Básica;Educação Básica;2008;646
+Educação Básica;Educação Básica;2009;689
+Educação Básica;Educação Básica;2010;746
+Educação Básica;Educação Básica;2011;770
+Educação Básica;Educação Básica;2012;812
+Educação Básica;Educação Básica;2013;833
+Educação Básica;Educação Básica;2014;876
+Educação Básica;Educação Básica;2015;853
+Educação Básica;Educação Básica;2016;863
+Educação Básica;Educação Básica;2017;870
+Educação Básica;Educação Básica;2018;870
+Educação Básica;Educação Básica;2019;831
+Educação Básica;Educação Básica;2020;832
+Educação Básica;Educação Básica;2021;844
+Educação Básica;Educação Básica;2022;934
+Educação Básica;Educação Infantil;2007;77
+Educação Básica;Educação Infantil;2008;81
+Educação Básica;Educação Infantil;2009;98
+Educação Básica;Educação Infantil;2010;153
+Educação Básica;Educação Infantil;2011;185
+Educação Básica;Educação Infantil;2012;198
+Educação Básica;Educação Infantil;2013;230
+Educação Básica;Educação Infantil;2014;236
+Educação Básica;Educação Infantil;2015;235
+Educação Básica;Educação Infantil;2016;264
+Educação Básica;Educação Infantil;2017;278
+Educação Básica;Educação Infantil;2018;269
+Educação Básica;Educação Infantil;2019;256
+Educação Básica;Educação Infantil;2020;245
+Educação Básica;Educação Infantil;2021;237
+Educação Básica;Educação Infantil;2022;274
+Educação Básica;Ensino Fundamental;2007;503
+Educação Básica;Ensino Fundamental;2008;520
+Educação Básica;Ensino Fundamental;2009;539
+Educação Básica;Ensino Fundamental;2010;543
+Educação Básica;Ensino Fundamental;2011;539
+Educação Básica;Ensino Fundamental;2012;555
+Educação Básica;Ensino Fundamental;2013;538
+Educação Básica;Ensino Fundamental;2014;575
+Educação Básica;Ensino Fundamental;2015;552
+Educação Básica;Ensino Fundamental;2016;557
+Educação Básica;Ensino Fundamental;2017;550
+Educação Básica;Ensino Fundamental;2018;558
+Educação Básica;Ensino Fundamental;2019;534
+Educação Básica;Ensino Fundamental;2020;558
+Educação Básica;Ensino Fundamental;2021;578
+Educação Básica;Ensino Fundamental;2022;594
+Educação Básica;Ensino Médio;2007;227
+Educação Básica;Ensino Médio;2008;230
+Educação Básica;Ensino Médio;2009;243
+Educação Básica;Ensino Médio;2010;256
+Educação Básica;Ensino Médio;2011;249
+Educação Básica;Ensino Médio;2012;258
+Educação Básica;Ensino Médio;2013;253
+Educação Básica;Ensino Médio;2014;276
+Educação Básica;Ensino Médio;2015;265
+Educação Básica;Ensino Médio;2016;254
+Educação Básica;Ensino Médio;2017;248
+Educação Básica;Ensino Médio;2018;256
+Educação Básica;Ensino Médio;2019;258
+Educação Básica;Ensino Médio;2020;251
+Educação Básica;Ensino Médio;2021;271
+Educação Básica;Ensino Médio;2022;278
+Educação Básica;Educação Profissional;2020;12
+Educação Básica;Educação Profissional;2021;16
+Educação Básica;Educação Profissional;2022;15
+Educação Básica;Educação de Jovens e Adultos - EJA;2007;128
+Educação Básica;Educação de Jovens e Adultos - EJA;2008;115
+Educação Básica;Educação de Jovens e Adultos - EJA;2009;98
+Educação Básica;Educação de Jovens e Adultos - EJA;2010;110
+Educação Básica;Educação de Jovens e Adultos - EJA;2011;107
+Educação Básica;Educação de Jovens e Adultos - EJA;2012;91
+Educação Básica;Educação de Jovens e Adultos - EJA;2013;85
+Educação Básica;Educação de Jovens e Adultos - EJA;2014;68
+Educação Básica;Educação de Jovens e Adultos - EJA;2015;50
+Educação Básica;Educação de Jovens e Adultos - EJA;2016;45
+Educação Básica;Educação de Jovens e Adultos - EJA;2017;49
+Educação Básica;Educação de Jovens e Adultos - EJA;2018;36
+Educação Básica;Educação de Jovens e Adultos - EJA;2019;24
+Educação Básica;Educação de Jovens e Adultos - EJA;2020;19
+Educação Básica;Educação de Jovens e Adultos - EJA;2021;31
+Educação Básica;Educação de Jovens e Adultos - EJA;2022;52
+Educação Infantil;Educação Básica;2007;77
+Educação Infantil;Educação Básica;2008;81
+Educação Infantil;Educação Básica;2009;98
+Educação Infantil;Educação Básica;2010;153
+Educação Infantil;Educação Básica;2011;185
+Educação Infantil;Educação Básica;2012;198
+Educação Infantil;Educação Básica;2013;230
+Educação Infantil;Educação Básica;2014;236
+Educação Infantil;Educação Básica;2015;235
+Educação Infantil;Educação Básica;2016;264
+Educação Infantil;Educação Básica;2017;278
+Educação Infantil;Educação Básica;2018;269
+Educação Infantil;Educação Básica;2019;256
+Educação Infantil;Educação Básica;2020;245
+Educação Infantil;Educação Básica;2021;237
+Educação Infantil;Educação Básica;2022;274
+Educação Infantil;Educação Infantil;2007;77
+Educação Infantil;Educação Infantil;2008;81
+Educação Infantil;Educação Infantil;2009;98
+Educação Infantil;Educação Infantil;2010;153
+Educação Infantil;Educação Infantil;2011;185
+Educação Infantil;Educação Infantil;2012;198
+Educação Infantil;Educação Infantil;2013;230
+Educação Infantil;Educação Infantil;2014;236
+Educação Infantil;Educação Infantil;2015;235
+Educação Infantil;Educação Infantil;2016;264
+Educação Infantil;Educação Infantil;2017;278
+Educação Infantil;Educação Infantil;2018;269
+Educação Infantil;Educação Infantil;2019;256
+Educação Infantil;Educação Infantil;2020;245
+Educação Infantil;Educação Infantil;2021;237
+Educação Infantil;Educação Infantil;2022;274
+Educação Infantil - Creche;Educação Básica;2007;12
+Educação Infantil - Creche;Educação Básica;2008;23
+Educação Infantil - Creche;Educação Básica;2009;36
+Educação Infantil - Creche;Educação Básica;2010;81
+Educação Infantil - Creche;Educação Básica;2011;113
+Educação Infantil - Creche;Educação Básica;2012;106
+Educação Infantil - Creche;Educação Básica;2013;158
+Educação Infantil - Creche;Educação Básica;2014;164
+Educação Infantil - Creche;Educação Básica;2015;162
+Educação Infantil - Creche;Educação Básica;2016;196
+Educação Infantil - Creche;Educação Básica;2017;207
+Educação Infantil - Creche;Educação Básica;2018;197
+Educação Infantil - Creche;Educação Básica;2019;183
+Educação Infantil - Creche;Educação Básica;2020;186
+Educação Infantil - Creche;Educação Básica;2021;180
+Educação Infantil - Creche;Educação Básica;2022;190
+Educação Infantil - Creche;Educação Infantil;2007;12
+Educação Infantil - Creche;Educação Infantil;2008;23
+Educação Infantil - Creche;Educação Infantil;2009;36
+Educação Infantil - Creche;Educação Infantil;2010;81
+Educação Infantil - Creche;Educação Infantil;2011;113
+Educação Infantil - Creche;Educação Infantil;2012;106
+Educação Infantil - Creche;Educação Infantil;2013;158
+Educação Infantil - Creche;Educação Infantil;2014;164
+Educação Infantil - Creche;Educação Infantil;2015;162
+Educação Infantil - Creche;Educação Infantil;2016;196
+Educação Infantil - Creche;Educação Infantil;2017;207
+Educação Infantil - Creche;Educação Infantil;2018;197
+Educação Infantil - Creche;Educação Infantil;2019;183
+Educação Infantil - Creche;Educação Infantil;2020;186
+Educação Infantil - Creche;Educação Infantil;2021;180
+Educação Infantil - Creche;Educação Infantil;2022;190
+Educação Infantil - Pré-escola;Educação Básica;2007;69
+Educação Infantil - Pré-escola;Educação Básica;2008;71
+Educação Infantil - Pré-escola;Educação Básica;2009;76
+Educação Infantil - Pré-escola;Educação Básica;2010;86
+Educação Infantil - Pré-escola;Educação Básica;2011;90
+Educação Infantil - Pré-escola;Educação Básica;2012;111
+Educação Infantil - Pré-escola;Educação Básica;2013;102
+Educação Infantil - Pré-escola;Educação Básica;2014;102
+Educação Infantil - Pré-escola;Educação Básica;2015;99
+Educação Infantil - Pré-escola;Educação Básica;2016;98
+Educação Infantil - Pré-escola;Educação Básica;2017;106
+Educação Infantil - Pré-escola;Educação Básica;2018;116
+Educação Infantil - Pré-escola;Educação Básica;2019;110
+Educação Infantil - Pré-escola;Educação Básica;2020;102
+Educação Infantil - Pré-escola;Educação Básica;2021;102
+Educação Infantil - Pré-escola;Educação Básica;2022;121
+Educação Infantil - Pré-escola;Educação Infantil;2007;69
+Educação Infantil - Pré-escola;Educação Infantil;2008;71
+Educação Infantil - Pré-escola;Educação Infantil;2009;76
+Educação Infantil - Pré-escola;Educação Infantil;2010;86
+Educação Infantil - Pré-escola;Educação Infantil;2011;90
+Educação Infantil - Pré-escola;Educação Infantil;2012;111
+Educação Infantil - Pré-escola;Educação Infantil;2013;102
+Educação Infantil - Pré-escola;Educação Infantil;2014;102
+Educação Infantil - Pré-escola;Educação Infantil;2015;99
+Educação Infantil - Pré-escola;Educação Infantil;2016;98
+Educação Infantil - Pré-escola;Educação Infantil;2017;106
+Educação Infantil - Pré-escola;Educação Infantil;2018;116
+Educação Infantil - Pré-escola;Educação Infantil;2019;110
+Educação Infantil - Pré-escola;Educação Infantil;2020;102
+Educação Infantil - Pré-escola;Educação Infantil;2021;102
+Educação Infantil - Pré-escola;Educação Infantil;2022;121
+Ensino Fundamental;Educação Básica;2007;503
+Ensino Fundamental;Educação Básica;2008;520
+Ensino Fundamental;Educação Básica;2009;539
+Ensino Fundamental;Educação Básica;2010;543
+Ensino Fundamental;Educação Básica;2011;539
+Ensino Fundamental;Educação Básica;2012;555
+Ensino Fundamental;Educação Básica;2013;538
+Ensino Fundamental;Educação Básica;2014;575
+Ensino Fundamental;Educação Básica;2015;552
+Ensino Fundamental;Educação Básica;2016;557
+Ensino Fundamental;Educação Básica;2017;550
+Ensino Fundamental;Educação Básica;2018;558
+Ensino Fundamental;Educação Básica;2019;534
+Ensino Fundamental;Educação Básica;2020;558
+Ensino Fundamental;Educação Básica;2021;578
+Ensino Fundamental;Educação Básica;2022;594
+Ensino Fundamental;Ensino Fundamental;2007;503
+Ensino Fundamental;Ensino Fundamental;2008;520
+Ensino Fundamental;Ensino Fundamental;2009;539
+Ensino Fundamental;Ensino Fundamental;2010;543
+Ensino Fundamental;Ensino Fundamental;2011;539
+Ensino Fundamental;Ensino Fundamental;2012;555
+Ensino Fundamental;Ensino Fundamental;2013;538
+Ensino Fundamental;Ensino Fundamental;2014;575
+Ensino Fundamental;Ensino Fundamental;2015;552
+Ensino Fundamental;Ensino Fundamental;2016;557
+Ensino Fundamental;Ensino Fundamental;2017;550
+Ensino Fundamental;Ensino Fundamental;2018;558
+Ensino Fundamental;Ensino Fundamental;2019;534
+Ensino Fundamental;Ensino Fundamental;2020;558
+Ensino Fundamental;Ensino Fundamental;2021;578
+Ensino Fundamental;Ensino Fundamental;2022;594
+Ensino Fundamental - Anos iniciais;Educação Básica;2007;272
+Ensino Fundamental - Anos iniciais;Educação Básica;2008;281
+Ensino Fundamental - Anos iniciais;Educação Básica;2009;279
+Ensino Fundamental - Anos iniciais;Educação Básica;2010;278
+Ensino Fundamental - Anos iniciais;Educação Básica;2011;266
+Ensino Fundamental - Anos iniciais;Educação Básica;2012;272
+Ensino Fundamental - Anos iniciais;Educação Básica;2013;278
+Ensino Fundamental - Anos iniciais;Educação Básica;2014;288
+Ensino Fundamental - Anos iniciais;Educação Básica;2015;276
+Ensino Fundamental - Anos iniciais;Educação Básica;2016;274
+Ensino Fundamental - Anos iniciais;Educação Básica;2017;290
+Ensino Fundamental - Anos iniciais;Educação Básica;2018;285
+Ensino Fundamental - Anos iniciais;Educação Básica;2019;281
+Ensino Fundamental - Anos iniciais;Educação Básica;2020;267
+Ensino Fundamental - Anos iniciais;Educação Básica;2021;266
+Ensino Fundamental - Anos iniciais;Educação Básica;2022;299
+Ensino Fundamental - Anos iniciais;Ensino Fundamental;2007;272
+Ensino Fundamental - Anos iniciais;Ensino Fundamental;2008;281
+Ensino Fundamental - Anos iniciais;Ensino Fundamental;2009;279
+Ensino Fundamental - Anos iniciais;Ensino Fundamental;2010;278
+Ensino Fundamental - Anos iniciais;Ensino Fundamental;2011;266
+Ensino Fundamental - Anos iniciais;Ensino Fundamental;2012;272
+Ensino Fundamental - Anos iniciais;Ensino Fundamental;2013;278
+Ensino Fundamental - Anos iniciais;Ensino Fundamental;2014;288
+Ensino Fundamental - Anos iniciais;Ensino Fundamental;2015;276
+Ensino Fundamental - Anos iniciais;Ensino Fundamental;2016;274
+Ensino Fundamental - Anos iniciais;Ensino Fundamental;2017;290
+Ensino Fundamental - Anos iniciais;Ensino Fundamental;2018;285
+Ensino Fundamental - Anos iniciais;Ensino Fundamental;2019;281
+Ensino Fundamental - Anos iniciais;Ensino Fundamental;2020;267
+Ensino Fundamental - Anos iniciais;Ensino Fundamental;2021;266
+Ensino Fundamental - Anos iniciais;Ensino Fundamental;2022;299
+Ensino Fundamental - Anos finais;Educação Básica;2007;275
+Ensino Fundamental - Anos finais;Educação Básica;2008;281
+Ensino Fundamental - Anos finais;Educação Básica;2009;313
+Ensino Fundamental - Anos finais;Educação Básica;2010;320
+Ensino Fundamental - Anos finais;Educação Básica;2011;328
+Ensino Fundamental - Anos finais;Educação Básica;2012;334
+Ensino Fundamental - Anos finais;Educação Básica;2013;308
+Ensino Fundamental - Anos finais;Educação Básica;2014;321
+Ensino Fundamental - Anos finais;Educação Básica;2015;317
+Ensino Fundamental - Anos finais;Educação Básica;2016;325
+Ensino Fundamental - Anos finais;Educação Básica;2017;305
+Ensino Fundamental - Anos finais;Educação Básica;2018;322
+Ensino Fundamental - Anos finais;Educação Básica;2019;300
+Ensino Fundamental - Anos finais;Educação Básica;2020;332
+Ensino Fundamental - Anos finais;Educação Básica;2021;352
+Ensino Fundamental - Anos finais;Educação Básica;2022;339
+Ensino Fundamental - Anos finais;Ensino Fundamental;2007;275
+Ensino Fundamental - Anos finais;Ensino Fundamental;2008;281
+Ensino Fundamental - Anos finais;Ensino Fundamental;2009;313
+Ensino Fundamental - Anos finais;Ensino Fundamental;2010;320
+Ensino Fundamental - Anos finais;Ensino Fundamental;2011;328
+Ensino Fundamental - Anos finais;Ensino Fundamental;2012;334
+Ensino Fundamental - Anos finais;Ensino Fundamental;2013;308
+Ensino Fundamental - Anos finais;Ensino Fundamental;2014;321
+Ensino Fundamental - Anos finais;Ensino Fundamental;2015;317
+Ensino Fundamental - Anos finais;Ensino Fundamental;2016;325
+Ensino Fundamental - Anos finais;Ensino Fundamental;2017;305
+Ensino Fundamental - Anos finais;Ensino Fundamental;2018;322
+Ensino Fundamental - Anos finais;Ensino Fundamental;2019;300
+Ensino Fundamental - Anos finais;Ensino Fundamental;2020;332
+Ensino Fundamental - Anos finais;Ensino Fundamental;2021;352
+Ensino Fundamental - Anos finais;Ensino Fundamental;2022;339
+Ensino Médio;Educação Básica;2007;227
+Ensino Médio;Educação Básica;2008;230
+Ensino Médio;Educação Básica;2009;243
+Ensino Médio;Educação Básica;2010;256
+Ensino Médio;Educação Básica;2011;249
+Ensino Médio;Educação Básica;2012;258
+Ensino Médio;Educação Básica;2013;253
+Ensino Médio;Educação Básica;2014;276
+Ensino Médio;Educação Básica;2015;265
+Ensino Médio;Educação Básica;2016;254
+Ensino Médio;Educação Básica;2017;248
+Ensino Médio;Educação Básica;2018;256
+Ensino Médio;Educação Básica;2019;258
+Ensino Médio;Educação Básica;2020;251
+Ensino Médio;Educação Básica;2021;271
+Ensino Médio;Educação Básica;2022;278
+Ensino Médio;Ensino Médio;2007;227
+Ensino Médio;Ensino Médio;2008;230
+Ensino Médio;Ensino Médio;2009;243
+Ensino Médio;Ensino Médio;2010;256
+Ensino Médio;Ensino Médio;2011;249
+Ensino Médio;Ensino Médio;2012;258
+Ensino Médio;Ensino Médio;2013;253
+Ensino Médio;Ensino Médio;2014;276
+Ensino Médio;Ensino Médio;2015;265
+Ensino Médio;Ensino Médio;2016;254
+Ensino Médio;Ensino Médio;2017;248
+Ensino Médio;Ensino Médio;2018;256
+Ensino Médio;Ensino Médio;2019;258
+Ensino Médio;Ensino Médio;2020;251
+Ensino Médio;Ensino Médio;2021;271
+Ensino Médio;Ensino Médio;2022;278
+Ensino Médio;Educação Profissional;2020;12
+Ensino Médio;Educação Profissional;2021;16
+Ensino Médio;Educação Profissional;2022;13
+Ensino Médio - Propedêutico;Educação Básica;2007;227
+Ensino Médio - Propedêutico;Educação Básica;2008;230
+Ensino Médio - Propedêutico;Educação Básica;2009;243
+Ensino Médio - Propedêutico;Educação Básica;2010;256
+Ensino Médio - Propedêutico;Educação Básica;2011;249
+Ensino Médio - Propedêutico;Educação Básica;2012;258
+Ensino Médio - Propedêutico;Educação Básica;2013;253
+Ensino Médio - Propedêutico;Educação Básica;2014;276
+Ensino Médio - Propedêutico;Educação Básica;2015;265
+Ensino Médio - Propedêutico;Educação Básica;2016;254
+Ensino Médio - Propedêutico;Educação Básica;2017;248
+Ensino Médio - Propedêutico;Educação Básica;2018;256
+Ensino Médio - Propedêutico;Educação Básica;2019;258
+Ensino Médio - Propedêutico;Educação Básica;2020;250
+Ensino Médio - Propedêutico;Educação Básica;2021;270
+Ensino Médio - Propedêutico;Educação Básica;2022;278
+Ensino Médio - Propedêutico;Ensino Médio;2007;227
+Ensino Médio - Propedêutico;Ensino Médio;2008;230
+Ensino Médio - Propedêutico;Ensino Médio;2009;243
+Ensino Médio - Propedêutico;Ensino Médio;2010;256
+Ensino Médio - Propedêutico;Ensino Médio;2011;249
+Ensino Médio - Propedêutico;Ensino Médio;2012;258
+Ensino Médio - Propedêutico;Ensino Médio;2013;253
+Ensino Médio - Propedêutico;Ensino Médio;2014;276
+Ensino Médio - Propedêutico;Ensino Médio;2015;265
+Ensino Médio - Propedêutico;Ensino Médio;2016;254
+Ensino Médio - Propedêutico;Ensino Médio;2017;248
+Ensino Médio - Propedêutico;Ensino Médio;2018;256
+Ensino Médio - Propedêutico;Ensino Médio;2019;258
+Ensino Médio - Propedêutico;Ensino Médio;2020;250
+Ensino Médio - Propedêutico;Ensino Médio;2021;270
+Ensino Médio - Propedêutico;Ensino Médio;2022;278
+Ensino Médio - Integrado;Educação Básica;2020;12
+Ensino Médio - Integrado;Educação Básica;2021;16
+Ensino Médio - Integrado;Educação Básica;2022;13
+Ensino Médio - Integrado;Ensino Médio;2020;12
+Ensino Médio - Integrado;Ensino Médio;2021;16
+Ensino Médio - Integrado;Ensino Médio;2022;13
+Ensino Médio - Integrado;Educação Profissional;2020;12
+Ensino Médio - Integrado;Educação Profissional;2021;16
+Ensino Médio - Integrado;Educação Profissional;2022;13
+Educação Profissional;Educação Básica;2020;12
+Educação Profissional;Educação Básica;2021;16
+Educação Profissional;Educação Básica;2022;15
+Educação Profissional;Ensino Médio;2020;12
+Educação Profissional;Ensino Médio;2021;16
+Educação Profissional;Ensino Médio;2022;13
+Educação Profissional;Educação Profissional;2020;12
+Educação Profissional;Educação Profissional;2021;16
+Educação Profissional;Educação Profissional;2022;15
+Educação Profissional - Técnica;Educação Básica;2020;12
+Educação Profissional - Técnica;Educação Básica;2021;16
+Educação Profissional - Técnica;Educação Básica;2022;15
+Educação Profissional - Técnica;Ensino Médio;2020;12
+Educação Profissional - Técnica;Ensino Médio;2021;16
+Educação Profissional - Técnica;Ensino Médio;2022;13
+Educação Profissional - Técnica;Educação Profissional;2020;12
+Educação Profissional - Técnica;Educação Profissional;2021;16
+Educação Profissional - Técnica;Educação Profissional;2022;15
+Educação de Jovens e Adultos;Educação Básica;2007;128
+Educação de Jovens e Adultos;Educação Básica;2008;115
+Educação de Jovens e Adultos;Educação Básica;2009;98
+Educação de Jovens e Adultos;Educação Básica;2010;110
+Educação de Jovens e Adultos;Educação Básica;2011;107
+Educação de Jovens e Adultos;Educação Básica;2012;91
+Educação de Jovens e Adultos;Educação Básica;2013;85
+Educação de Jovens e Adultos;Educação Básica;2014;68
+Educação de Jovens e Adultos;Educação Básica;2015;50
+Educação de Jovens e Adultos;Educação Básica;2016;45
+Educação de Jovens e Adultos;Educação Básica;2017;49
+Educação de Jovens e Adultos;Educação Básica;2018;36
+Educação de Jovens e Adultos;Educação Básica;2019;24
+Educação de Jovens e Adultos;Educação Básica;2020;19
+Educação de Jovens e Adultos;Educação Básica;2021;31
+Educação de Jovens e Adultos;Educação Básica;2022;52
+Educação de Jovens e Adultos;Educação de Jovens e Adultos - EJA;2007;128
+Educação de Jovens e Adultos;Educação de Jovens e Adultos - EJA;2008;115
+Educação de Jovens e Adultos;Educação de Jovens e Adultos - EJA;2009;98
+Educação de Jovens e Adultos;Educação de Jovens e Adultos - EJA;2010;110
+Educação de Jovens e Adultos;Educação de Jovens e Adultos - EJA;2011;107
+Educação de Jovens e Adultos;Educação de Jovens e Adultos - EJA;2012;91
+Educação de Jovens e Adultos;Educação de Jovens e Adultos - EJA;2013;85
+Educação de Jovens e Adultos;Educação de Jovens e Adultos - EJA;2014;68
+Educação de Jovens e Adultos;Educação de Jovens e Adultos - EJA;2015;50
+Educação de Jovens e Adultos;Educação de Jovens e Adultos - EJA;2016;45
+Educação de Jovens e Adultos;Educação de Jovens e Adultos - EJA;2017;49
+Educação de Jovens e Adultos;Educação de Jovens e Adultos - EJA;2018;36
+Educação de Jovens e Adultos;Educação de Jovens e Adultos - EJA;2019;24
+Educação de Jovens e Adultos;Educação de Jovens e Adultos - EJA;2020;19
+Educação de Jovens e Adultos;Educação de Jovens e Adultos - EJA;2021;31
+Educação de Jovens e Adultos;Educação de Jovens e Adultos - EJA;2022;52
+Educação de Jovens e Adultos - Ensino Fundamental;Educação Básica;2007;76
+Educação de Jovens e Adultos - Ensino Fundamental;Educação Básica;2008;69
+Educação de Jovens e Adultos - Ensino Fundamental;Educação Básica;2009;51
+Educação de Jovens e Adultos - Ensino Fundamental;Educação Básica;2010;41
+Educação de Jovens e Adultos - Ensino Fundamental;Educação Básica;2011;49
+Educação de Jovens e Adultos - Ensino Fundamental;Educação Básica;2012;36
+Educação de Jovens e Adultos - Ensino Fundamental;Educação Básica;2013;29
+Educação de Jovens e Adultos - Ensino Fundamental;Educação Básica;2014;31
+Educação de Jovens e Adultos - Ensino Fundamental;Educação Básica;2015;21
+Educação de Jovens e Adultos - Ensino Fundamental;Educação Básica;2016;23
+Educação de Jovens e Adultos - Ensino Fundamental;Educação Básica;2017;12
+Educação de Jovens e Adultos - Ensino Fundamental;Educação Básica;2018;14
+Educação de Jovens e Adultos - Ensino Fundamental;Educação Básica;2019;13
+Educação de Jovens e Adultos - Ensino Fundamental;Educação Básica;2020;11
+Educação de Jovens e Adultos - Ensino Fundamental;Educação Básica;2021;11
+Educação de Jovens e Adultos - Ensino Fundamental;Educação Básica;2022;22
+Educação de Jovens e Adultos - Ensino Fundamental;Educação de Jovens e Adultos - EJA;2007;76
+Educação de Jovens e Adultos - Ensino Fundamental;Educação de Jovens e Adultos - EJA;2008;69
+Educação de Jovens e Adultos - Ensino Fundamental;Educação de Jovens e Adultos - EJA;2009;51
+Educação de Jovens e Adultos - Ensino Fundamental;Educação de Jovens e Adultos - EJA;2010;41
+Educação de Jovens e Adultos - Ensino Fundamental;Educação de Jovens e Adultos - EJA;2011;49
+Educação de Jovens e Adultos - Ensino Fundamental;Educação de Jovens e Adultos - EJA;2012;36
+Educação de Jovens e Adultos - Ensino Fundamental;Educação de Jovens e Adultos - EJA;2013;29
+Educação de Jovens e Adultos - Ensino Fundamental;Educação de Jovens e Adultos - EJA;2014;31
+Educação de Jovens e Adultos - Ensino Fundamental;Educação de Jovens e Adultos - EJA;2015;21
+Educação de Jovens e Adultos - Ensino Fundamental;Educação de Jovens e Adultos - EJA;2016;23
+Educação de Jovens e Adultos - Ensino Fundamental;Educação de Jovens e Adultos - EJA;2017;12
+Educação de Jovens e Adultos - Ensino Fundamental;Educação de Jovens e Adultos - EJA;2018;14
+Educação de Jovens e Adultos - Ensino Fundamental;Educação de Jovens e Adultos - EJA;2019;13
+Educação de Jovens e Adultos - Ensino Fundamental;Educação de Jovens e Adultos - EJA;2020;11
+Educação de Jovens e Adultos - Ensino Fundamental;Educação de Jovens e Adultos - EJA;2021;11
+Educação de Jovens e Adultos - Ensino Fundamental;Educação de Jovens e Adultos - EJA;2022;22
+Educação de Jovens e Adultos - Ensino Médio;Educação Básica;2007;75
+Educação de Jovens e Adultos - Ensino Médio;Educação Básica;2008;70
+Educação de Jovens e Adultos - Ensino Médio;Educação Básica;2009;67
+Educação de Jovens e Adultos - Ensino Médio;Educação Básica;2010;83
+Educação de Jovens e Adultos - Ensino Médio;Educação Básica;2011;78
+Educação de Jovens e Adultos - Ensino Médio;Educação Básica;2012;68
+Educação de Jovens e Adultos - Ensino Médio;Educação Básica;2013;63
+Educação de Jovens e Adultos - Ensino Médio;Educação Básica;2014;49
+Educação de Jovens e Adultos - Ensino Médio;Educação Básica;2015;39
+Educação de Jovens e Adultos - Ensino Médio;Educação Básica;2016;31
+Educação de Jovens e Adultos - Ensino Médio;Educação Básica;2017;45
+Educação de Jovens e Adultos - Ensino Médio;Educação Básica;2018;29
+Educação de Jovens e Adultos - Ensino Médio;Educação Básica;2019;20
+Educação de Jovens e Adultos - Ensino Médio;Educação Básica;2020;15
+Educação de Jovens e Adultos - Ensino Médio;Educação Básica;2021;26
+Educação de Jovens e Adultos - Ensino Médio;Educação Básica;2022;38
+Educação de Jovens e Adultos - Ensino Médio;Educação de Jovens e Adultos - EJA;2007;75
+Educação de Jovens e Adultos - Ensino Médio;Educação de Jovens e Adultos - EJA;2008;70
+Educação de Jovens e Adultos - Ensino Médio;Educação de Jovens e Adultos - EJA;2009;67
+Educação de Jovens e Adultos - Ensino Médio;Educação de Jovens e Adultos - EJA;2010;83
+Educação de Jovens e Adultos - Ensino Médio;Educação de Jovens e Adultos - EJA;2011;78
+Educação de Jovens e Adultos - Ensino Médio;Educação de Jovens e Adultos - EJA;2012;68
+Educação de Jovens e Adultos - Ensino Médio;Educação de Jovens e Adultos - EJA;2013;63
+Educação de Jovens e Adultos - Ensino Médio;Educação de Jovens e Adultos - EJA;2014;49
+Educação de Jovens e Adultos - Ensino Médio;Educação de Jovens e Adultos - EJA;2015;39
+Educação de Jovens e Adultos - Ensino Médio;Educação de Jovens e Adultos - EJA;2016;31
+Educação de Jovens e Adultos - Ensino Médio;Educação de Jovens e Adultos - EJA;2017;45
+Educação de Jovens e Adultos - Ensino Médio;Educação de Jovens e Adultos - EJA;2018;29
+Educação de Jovens e Adultos - Ensino Médio;Educação de Jovens e Adultos - EJA;2019;20
+Educação de Jovens e Adultos - Ensino Médio;Educação de Jovens e Adultos - EJA;2020;15
+Educação de Jovens e Adultos - Ensino Médio;Educação de Jovens e Adultos - EJA;2021;26
+Educação de Jovens e Adultos - Ensino Médio;Educação de Jovens e Adultos - EJA;2022;38
