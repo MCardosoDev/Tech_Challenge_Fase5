@@ -2023,7 +2023,7 @@ def panelDash():
                 labels=df_idne['Fase'], 
                 values=df_idne['Resultado'],
                 hole=.5, 
-                title=f'INDE Geral  {df_idne['Resultado'].mean().round(2)}',
+                title=f"INDE Geral  {df_idne['Resultado'].mean().round(2)}",
                 textinfo='percent', 
                 hoverinfo='percent')]
             )
@@ -2063,8 +2063,8 @@ def panelDash():
                 labels=df_idne['Fase'], 
                 values=df_idne['Resultado'],
                 hole=.5, 
-                title=f'INDE Geral  {df_idne['Resultado'].mean().round(2)}',
-                textinfo='percent', 
+                title=f"INDE Geral  {df_idne['Resultado'].mean().round(2)}",
+                textinfo='percent',
                 hoverinfo='percent')]
             )
 
