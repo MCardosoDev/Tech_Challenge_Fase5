@@ -398,7 +398,7 @@ def panelIDA():
                                     ])
     with tab1:
         alunos_df = get_aluno()
-        selected_aluno = st.selectbox("Selecione o aluno:", alunos_df['Nome_Completo'], key='2')
+        selected_aluno = st.selectbox("Selecione o aluno:", alunos_df['Nome_Completo'], key='ida')
 
         if selected_aluno:
             matricula_selected = alunos_df.loc[alunos_df['Nome_Completo'] == selected_aluno, 'Matricula'].values[0]
@@ -554,6 +554,7 @@ def panelDash():
         st.markdown("### IAN - Indicadores de adequação de nivel", unsafe_allow_html=True)
         st.markdown("#### Alfabetização", unsafe_allow_html=True)
         df_alf = sql("select * from Alfabetizacao")
+        alunos_df = get_aluno()
 
         df_alf['data'] = pd.to_datetime(df_alf['data'])
         df_alf['data'] = df_alf['data'].dt.date
@@ -583,6 +584,16 @@ def panelDash():
             )
 
         df_filtered = df_alf[(df_alf['data'] >= start_date) & (df_alf['data'] <= end_date)]
+        
+        alunos_list = ['Todos'] + alunos_df['Nome_Completo'].tolist()
+        aluno = st.selectbox("Selecione o aluno:", alunos_list, key='alf')
+
+        if aluno == 'Todos':
+            df_filtered = df_filtered.copy()
+        else:
+            matricula = alunos_df.loc[alunos_df['Nome_Completo'] == aluno, 'Matricula'].values[0]  
+            df_filtered = df_filtered[df_filtered['matricula'] == matricula]
+
         df_sum = df_filtered.groupby('data').agg({'pontuacao': 'sum'}).reset_index()
         df_sum.rename(columns={'nivel_risco': 'Contagem'}, inplace=True)
         df_sum = df_sum.sort_values(by='data')
@@ -924,6 +935,7 @@ def panelDash():
         st.markdown("#### Alfabetização", unsafe_allow_html=True)
 
         df_ida_a = sql("select * from IDA")
+        alunos_df = get_aluno()
         df_ida_a['data'] = pd.to_datetime(df_ida_a['data']).dt.date
 
         min_date = df_ida_a['data'].min()
@@ -952,6 +964,15 @@ def panelDash():
             )
 
         df_ida_a_filtered = df_ida_a[(df_ida_a['data'] >= start_date) & (df_ida_a['data'] <= end_date)]
+        alunos_list = ['Todos'] + alunos_df['Nome_Completo'].tolist()
+        aluno = st.selectbox("Selecione o aluno:", alunos_list, key='ida_a')
+
+        if aluno == 'Todos':
+            df_ida_a_filtered = df_ida_a_filtered.copy()
+        else:
+            matricula = alunos_df.loc[alunos_df['Nome_Completo'] == aluno, 'Matricula'].values[0]  
+            df_ida_a_filtered = df_ida_a_filtered[df_ida_a_filtered['matricula'] == matricula]
+
         cols_pontuacao = df_ida_a_filtered.columns[2:-1]
         df_ida_a_filtered['media'] = df_ida_a_filtered[cols_pontuacao].mean(axis=1)
 
@@ -1345,6 +1366,7 @@ def panelDash():
 
     with tab3:
         df_ieg = sql("select * from IEG")
+        alunos_df = get_aluno()
         st.markdown("### IEG - Indicadores de Engajamento", unsafe_allow_html=True)
 
         df_ieg['data'] = pd.to_datetime(df_ieg['data'])
@@ -1377,6 +1399,15 @@ def panelDash():
             )
 
         df_ieg_filtered = df_ieg[(df_ieg['data'] >= start_date) & (df_ieg['data'] <= end_date)]
+        alunos_list = ['Todos'] + alunos_df['Nome_Completo'].tolist()
+        aluno = st.selectbox("Selecione o aluno:", alunos_list, key='ieg')
+
+        if aluno == 'Todos':
+            df_ieg_filtered = df_ieg_filtered.copy()
+        else:
+            matricula = alunos_df.loc[alunos_df['Nome_Completo'] == aluno, 'Matricula'].values[0]  
+            df_ieg_filtered = df_ieg_filtered[df_ieg_filtered['matricula'] == matricula]
+
         df_ieg_sum = df_ieg_filtered.groupby('data').agg({'pontuacao': 'sum'}).reset_index()
         df_ieg_sum.rename(columns={'nivel_risco': 'Contagem'}, inplace=True)
         df_ieg_sum = df_ieg_sum.sort_values(by='data')
@@ -1458,6 +1489,7 @@ def panelDash():
 
     with tab4:
         df_iaa = sql("select * from IAA")
+        alunos_df = get_aluno()
         st.markdown("### IAA - Indicador de AutoAvaliação", unsafe_allow_html=True)
 
         df_iaa['data'] = pd.to_datetime(df_iaa['data'])
@@ -1490,6 +1522,15 @@ def panelDash():
             )
 
         df_iaa_filtered = df_iaa[(df_iaa['data'] >= start_date) & (df_iaa['data'] <= end_date)]
+        alunos_list = ['Todos'] + alunos_df['Nome_Completo'].tolist()
+        aluno = st.selectbox("Selecione o aluno:", alunos_list, key='iaa')
+
+        if aluno == 'Todos':
+            df_iaa_filtered = df_iaa_filtered.copy()
+        else:
+            matricula = alunos_df.loc[alunos_df['Nome_Completo'] == aluno, 'Matricula'].values[0]  
+            df_iaa_filtered = df_iaa_filtered[df_iaa_filtered['matricula'] == matricula]
+
         df_iaa_sum = df_iaa_filtered.groupby('data').agg({'pontuacao': 'sum'}).reset_index()
         df_iaa_sum.rename(columns={'nivel_risco': 'Contagem'}, inplace=True)
         df_iaa_sum = df_iaa_sum.sort_values(by='data')
@@ -1571,6 +1612,7 @@ def panelDash():
 
     with tab5:
         df_ips = sql("select * from IPS")
+        alunos_df = get_aluno()
         st.markdown("### IPS - Indicador Psicossocial", unsafe_allow_html=True)
 
         df_ips['data'] = pd.to_datetime(df_ips['data'])
@@ -1603,6 +1645,15 @@ def panelDash():
             )
 
         df_ips_filtered = df_ips[(df_ips['data'] >= start_date) & (df_ips['data'] <= end_date)]
+        alunos_list = ['Todos'] + alunos_df['Nome_Completo'].tolist()
+        aluno = st.selectbox("Selecione o aluno:", alunos_list, key='ips')
+
+        if aluno == 'Todos':
+            df_ips_filtered = df_ips_filtered.copy()
+        else:
+            matricula = alunos_df.loc[alunos_df['Nome_Completo'] == aluno, 'Matricula'].values[0]  
+            df_ips_filtered = df_ips_filtered[df_ips_filtered['matricula'] == matricula]
+
         df_ips_sum = df_ips_filtered.groupby('data').agg({'pontuacao': 'sum'}).reset_index()
         df_ips_sum.rename(columns={'nivel_risco': 'Contagem'}, inplace=True)
         df_ips_sum = df_ips_sum.sort_values(by='data')
@@ -1684,6 +1735,7 @@ def panelDash():
 
     with tab6:
         df_ipp = sql("select * from IPP")
+        alunos_df = get_aluno()
         st.markdown("### IPP - Indicadores Psicopedagógicos", unsafe_allow_html=True)
 
         df_ipp['data'] = pd.to_datetime(df_ipp['data'])
@@ -1716,6 +1768,15 @@ def panelDash():
             )
 
         df_ipp_filtered = df_ipp[(df_ipp['data'] >= start_date) & (df_ipp['data'] <= end_date)]
+        alunos_list = ['Todos'] + alunos_df['Nome_Completo'].tolist()
+        aluno = st.selectbox("Selecione o aluno:", alunos_list, key='ipp')
+
+        if aluno == 'Todos':
+            df_ipp_filtered = df_ipp_filtered.copy()
+        else:
+            matricula = alunos_df.loc[alunos_df['Nome_Completo'] == aluno, 'Matricula'].values[0]  
+            df_ipp_filtered = df_ipp_filtered[df_ipp_filtered['matricula'] == matricula]
+
         df_ipp_sum = df_ipp_filtered.groupby('data').agg({'pontuacao': 'sum'}).reset_index()
         df_ipp_sum.rename(columns={'nivel_risco': 'Contagem'}, inplace=True)
         df_ipp_sum = df_ipp_sum.sort_values(by='data')
@@ -1799,6 +1860,7 @@ def panelDash():
         st.markdown("### IPV - Indicadores do Ponto de Virada", unsafe_allow_html=True)
 
         df_ipv = sql("select * from IPV")
+        alunos_df = get_aluno()
         df_ipv['data'] = pd.to_datetime(df_ipv['data'])
         df_ipv['data'] = df_ipv['data'].dt.date
         df_ipv.sort_values(by='data', inplace=True)
@@ -1829,6 +1891,15 @@ def panelDash():
             )
 
         df_ipv_filtered = df_ipv[(df_ipv['data'] >= start_date) & (df_ipv['data'] <= end_date)]
+        alunos_list = ['Todos'] + alunos_df['Nome_Completo'].tolist()
+        aluno = st.selectbox("Selecione o aluno:", alunos_list, key='ipv')
+
+        if aluno == 'Todos':
+            df_ipv_filtered = df_ipv_filtered.copy()
+        else:
+            matricula = alunos_df.loc[alunos_df['Nome_Completo'] == aluno, 'Matricula'].values[0]  
+            df_ipv_filtered = df_ipv_filtered[df_ipv_filtered['matricula'] == matricula]
+
         df_ipv_sum = df_ipv_filtered.groupby('data').agg({'pontuacao': 'sum'}).reset_index()
         df_ipv_sum.rename(columns={'nivel_risco': 'Contagem'}, inplace=True)
         df_ipv_sum = df_ipv_sum.sort_values(by='data')
@@ -2080,7 +2151,7 @@ def panelDash():
         
 def main():
     st.set_page_config(page_title='Passos Mágicos', page_icon=':bar_chart:', layout='wide')
-    logo_url = './Images/logo.png'
+    logo_url = 'logo.png'
 
     st.sidebar.image(logo_url, width=250)
     view = st.sidebar.radio(
