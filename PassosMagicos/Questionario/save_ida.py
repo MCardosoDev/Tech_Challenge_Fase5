@@ -32,4 +32,4 @@ class QuestionarioIDASalvo:
         df_table = IDATable(engine)
         df_table.add_data(df_renomeado)
 
-        return df_renomeado, True
+        return True

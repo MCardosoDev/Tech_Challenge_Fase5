@@ -64,4 +64,4 @@ class QuestionarioFundSalvo:
         fundamental_table = FundamentalTable(engine)
         fundamental_table.add_data(df_fundamental_renomeado)
     
-        return df_fundamental_renomeado, True
+        return True

@@ -49,7 +49,7 @@ class QuestionarioIEGSalvo:
             "Ele demonstra compreensão dos conceitos e conteúdos abordados?": "compreensao_conceitos_conteudos",
             "Ele consegue aplicar o conhecimento adquirido em diferentes situações?": "aplicar_conhecimento_diferentes_situacoes",
             "Ele identifica suas dificuldades e busca formas de superá-las?": "identifica_dificuldades_busca_superar",
-            "Ele demonstra progresso em relação ao seu nível inicial de conhecimento?": "progresso_relacao_nivel_inicial",
+            "O aluno demonstra progresso em relação ao seu nível inicial de conhecimento?": "progresso_relacao_nivel_inicial",
             "Ele se esforça para melhorar suas habilidades e desempenho?": "esforca_melhorar_habilidades_desempenho"
         }
         df = pd.DataFrame.from_dict(self.questionarios, orient='index').T
@@ -63,4 +63,4 @@ class QuestionarioIEGSalvo:
         fundamental_table = IEGTable(engine)
         fundamental_table.add_data(df_renomeado)
 
-        return df_renomeado, True
+        return True

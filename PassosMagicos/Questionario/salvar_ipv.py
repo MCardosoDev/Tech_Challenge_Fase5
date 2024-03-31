@@ -59,4 +59,4 @@ class QuestionarioIPVSalvo:
         fundamental_table = IPVTable(engine)
         fundamental_table.add_data(df_renomeado)
 
-        return df_renomeado, True
+        return True

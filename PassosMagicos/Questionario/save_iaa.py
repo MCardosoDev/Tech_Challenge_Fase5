@@ -64,4 +64,4 @@ class QuestionarioIAASalvo:
         fundamental_table = IAATable(engine)
         fundamental_table.add_data(df_renomeado)
 
-        return df_renomeado, True
+        return True

@@ -64,4 +64,4 @@ class QuestionarioEMSalvo:
         ensino_medio_table = EnsinoMedioTable(engine)
         ensino_medio_table.add_data(df_ensino_medio_renomeado)
 
-        return df_ensino_medio_renomeado, True
+        return True

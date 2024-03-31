@@ -59,4 +59,4 @@ class QuestionarioIPSSalvo:
         fundamental_table = IPSTable(engine)
         fundamental_table.add_data(df_renomeado)
 
-        return df_renomeado, True
+        return True

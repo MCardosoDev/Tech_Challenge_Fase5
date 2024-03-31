@@ -37,14 +37,15 @@ class IEGTable:
         session = Session()
 
         data = df.to_dict(orient='records')
+        print(data)
         try:
             for row in data:
                 geral = IEG(**row)
                 session.add(geral)
             session.commit()
-            # print("Dados adicionados com sucesso.")
+            print("Dados adicionados com sucesso.")
         except Exception as e:
-            # print(f"Erro ao adicionar dados: {e}")
+            print(f"Erro ao adicionar dados: {e}")
             session.rollback()
         finally:
             session.close()

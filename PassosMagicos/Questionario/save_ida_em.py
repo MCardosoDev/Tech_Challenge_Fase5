@@ -40,4 +40,4 @@ class QuestionarioIDA_emSalvo:
         em_table = IDA_emTable(engine)
         em_table.add_data(em_renomeado)
 
-        return em_renomeado, True
+        return True

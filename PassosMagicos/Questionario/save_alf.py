@@ -64,4 +64,4 @@ class QuestionarioAlfSalvo:
         alfabetizacao_table = AlfabetizacaoTable(engine)
         alfabetizacao_table.add_data(df_alfabetizacao_renomeado)
 
-        return df_alfabetizacao_renomeado, True
+        return True

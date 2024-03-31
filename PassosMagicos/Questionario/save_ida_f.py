@@ -35,4 +35,4 @@ class QuestionarioIDA_fSalvo:
         df_table = IDA_fTable(engine)
         df_table.add_data(df_renomeado)
 
-        return df_renomeado, True
+        return True

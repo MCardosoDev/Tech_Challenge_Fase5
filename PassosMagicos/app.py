@@ -1,3 +1,4 @@
+from sqlglot import column
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -26,6 +27,7 @@ from Questionario.questionarios_f import QuestionariosAlf
 from Questionario.quetionarios_ieg import QuestionariosIEG
 from Questionario.questionarios_iaa import QuestionariosIAA
 from Questionario.questionarios_ida import QuestionariosIDA
+from Questionario.salvar_cadastro import CadastroAlunoSalvo
 
 engine = create_engine(f'sqlite:///Data/passos_magicos.db', echo=False)
 
@@ -71,9 +73,8 @@ def panelIAN():
 
             if st.button('Salvar Questionário', key='s1'):
                     questionario_salvo = QuestionarioAlfSalvo(answers_alf)
-                    questionario_alfabetizacao, result = questionario_salvo.save()
+                    result = questionario_salvo.save()
                     if result:
-                        st.write(questionario_alfabetizacao)
                         answers_alf.clear()
                         st.success("Questionário salvo com sucesso!")
             else:
@@ -106,10 +107,9 @@ def panelIAN():
             
             if st.button('Salvar Questionário', key='s2'):
                     questionario_salvo = QuestionarioFundSalvo(answers_f)
-                    questionario_fundamental, result = questionario_salvo.save()
+                    result = questionario_salvo.save()
 
                     if result:
-                        st.write(questionario_fundamental)
                         answers_f.clear()
                         st.success("Questionário salvo com sucesso!")
             else:
@@ -142,9 +142,8 @@ def panelIAN():
             
             if st.button('Salvar Questionário', key='s3'):
                     questionario_salvo = QuestionarioFund2Salvo(answers_f2)
-                    questionario_fundamental2, result = questionario_salvo.save()
+                    result = questionario_salvo.save()
                     if result:
-                        st.write(questionario_fundamental2)
                         answers_f2.clear()
                         st.success("Questionário salvo com sucesso!")
             else:
@@ -177,9 +176,8 @@ def panelIAN():
 
             if st.button('Salvar Questionário', key='s4'):
                     questionario_salvo = QuestionarioEMSalvo(answers_em)
-                    questionario_ensino_medio, result = questionario_salvo.save()
+                    result = questionario_salvo.save()
                     if result:
-                        st.write(questionario_ensino_medio)
                         answers_em.clear()
                         st.success("Questionário salvo com sucesso!")
             else:
@@ -215,9 +213,8 @@ def panelIEG():
 
         if st.button('Salvar Questionário', key='s5'):
                 questionario_salvo = QuestionarioIEGSalvo(answers_g)
-                questionario_geral, result = questionario_salvo.save()
+                result = questionario_salvo.save()
                 if result:
-                    st.write(questionario_geral)
                     answers_g.clear()
                     st.success("Questionário salvo com sucesso!")
         else:
@@ -253,9 +250,8 @@ def panelIAA():
 
         if st.button('Salvar Questionário', key='s5'):
                 questionario_salvo = QuestionarioIAASalvo(answers_iaa)
-                questionario_iaa, result = questionario_salvo.save()
+                result = questionario_salvo.save()
                 if result:
-                    st.write(questionario_iaa)
                     answers_iaa.clear()
                     st.success("Questionário salvo com sucesso!")
         else:
@@ -293,9 +289,8 @@ def panelIPP():
 
         if st.button('Salvar Questionário', key='s6'):
                 questionario_salvo = QuestionarioIPPSalvo(answers_ipp)
-                questionario_ipp, result = questionario_salvo.save()
+                result = questionario_salvo.save()
                 if result:
-                    st.write(questionario_ipp)
                     answers_ipp.clear()
                     st.success("Questionário salvo com sucesso!")
         else:
@@ -333,9 +328,8 @@ def panelIPS():
 
         if st.button('Salvar Questionário', key='s7'):
                 questionario_salvo = QuestionarioIPSSalvo(answers_ips)
-                questionario_ips, result = questionario_salvo.save()
+                result = questionario_salvo.save()
                 if result:
-                    st.write(questionario_ips)
                     answers_ips.clear()
                     st.success("Questionário salvo com sucesso!")
         else:
@@ -373,9 +367,8 @@ def panelIPV():
 
         if st.button('Salvar Questionário', key='s7'):
                 questionario_salvo = QuestionarioIPVSalvo(answers_ipv)
-                questionario_ipv, result = questionario_salvo.save()
+                result = questionario_salvo.save()
                 if result:
-                    st.write(questionario_ipv)
                     answers_ipv.clear()
                     st.success("Questionário salvo com sucesso!")
         else:
@@ -415,9 +408,8 @@ def panelIDA():
 
             if st.button('Salvar Questionário', key='s11'):
                     questionario_salvo = QuestionarioIDASalvo(answers_ida)
-                    questionario_alfabetizacao, result = questionario_salvo.save()
+                    result = questionario_salvo.save()
                     if result:
-                        st.write(questionario_alfabetizacao)
                         answers_ida.clear()
                         st.success("Questionário salvo com sucesso!")
             else:
@@ -450,10 +442,9 @@ def panelIDA():
             
             if st.button('Salvar Questionário', key='s12'):
                     questionario_salvo = QuestionarioIDA_fSalvo(answers_ida_f)
-                    questionario_ida_fundamental, result = questionario_salvo.save()
+                    result = questionario_salvo.save()
 
                     if result:
-                        st.write(questionario_ida_fundamental)
                         answers_ida_f.clear()
                         st.success("Questionário salvo com sucesso!")
             else:
@@ -486,9 +477,8 @@ def panelIDA():
             
             if st.button('Salvar Questionário', key='s13'):
                     questionario_salvo = QuestionarioIDA_f2Salvo(answers_ida_f2)
-                    questionario_ida_fundamental2, result = questionario_salvo.save()
+                    result = questionario_salvo.save()
                     if result:
-                        st.write(questionario_ida_fundamental2)
                         answers_ida_f2.clear()
                         st.success("Questionário salvo com sucesso!")
             else:
@@ -521,9 +511,8 @@ def panelIDA():
 
             if st.button('Salvar Questionário', key='s14'):
                     questionario_salvo = QuestionarioIDA_emSalvo(answers_ida_em)
-                    questionario_ida_ensino_medio, result = questionario_salvo.save()
+                    result = questionario_salvo.save()
                     if result:
-                        st.write(questionario_ida_ensino_medio)
                         answers_ida_em.clear()
                         st.success("Questionário salvo com sucesso!")
             else:
@@ -548,10 +537,10 @@ def panelDash():
                                                         'IPP',
                                                         'IPV',
                                                         'Alunos',
-                                                        'Externo'
+                                                        'Dados Externos'
                                                     ])
     with tab1:
-        st.markdown("### IAN - Indicadores de adequação de nivel", unsafe_allow_html=True)
+        st.markdown("### IAN - Indicadores de adequação de nível", unsafe_allow_html=True)
         st.markdown("#### Alfabetização", unsafe_allow_html=True)
         df_alf = sql("select * from Alfabetizacao")
         alunos_df = get_aluno()
@@ -598,7 +587,7 @@ def panelDash():
         df_sum.rename(columns={'nivel_risco': 'Contagem'}, inplace=True)
         df_sum = df_sum.sort_values(by='data')
 
-        fig = px.line(df_sum, x='data', y='pontuacao', title='Evolução da Pontuação Total ao Longo do Tempo')
+        fig = px.line(df_sum, x='data', y='pontuacao', title='Evolução do Índice ao Longo do Tempo')
         fig.update_layout(xaxis_title='Data', yaxis_title='Pontuação Total')
         st.plotly_chart(fig, style = style, use_container_width=True)
 
@@ -611,10 +600,10 @@ def panelDash():
         fig2 = go.Figure()
         fig2.add_trace(go.Scatter(x=df_seas.index, y=results.seasonal, mode='lines', name='Sazonalidade'))
         fig2.add_trace(go.Scatter(x=df_seas.index, y=rolling_avg, mode='lines', name='Média Móvel (30 dias)'))
-        fig2.update_layout(title='Sazonalidade com Média Móvel (30 dias) do Último Ano', xaxis_title='Data', yaxis_title='Valor')
+        fig2.update_layout(title='Sazonalidade e Média Móvel', xaxis_title='Data', yaxis_title='Valor')
         st.plotly_chart(fig2, style=style, use_container_width=True)
 
-        recent_data = df_alf[df_alf['data'] == df_alf['data'].max()]
+        recent_data = df_filtered[df_filtered['data'] == df_filtered['data'].max()]
         mapper_alfabetizacao = {
             "reconhece_letras": "A criança reconhece todas as letras do alfabeto?",
             "ler_palavras_simples": "A criança consegue ler palavras simples e familiares?",
@@ -637,7 +626,7 @@ def panelDash():
 
         fig3.update_layout(
             barmode='group', 
-            title='Contagem de Respostas no Último Registro',
+            title='Respostas nas Últimas Avaliações',
             xaxis_title='Resposta', 
             yaxis_title='Contagem'
         )
@@ -650,19 +639,19 @@ def panelDash():
             fig_risco = go.Figure(go.Bar(x=contagem_risco.index, y=contagem_risco.values))
 
             fig_risco.update_layout(
-                title='Contagem de Risco no Último Registro',
+                title='Risco nas Últimas Avaliações',
                 xaxis_title='Risco', 
                 yaxis_title='Contagem'
             )
             
             st.plotly_chart(fig_risco, style=style, use_container_width=True)
         with col2:
-            contagem_risco_g = df_alf['nivel_risco'].value_counts()
+            contagem_risco_g = df_filtered['nivel_risco'].value_counts()
 
             fig_risco_g = go.Figure(go.Bar(x=contagem_risco_g.index, y=contagem_risco_g.values))
 
             fig_risco_g.update_layout(
-                title='Contagem de Risco Geral',
+                title='Risco Geral',
                 xaxis_title='Risco', 
                 yaxis_title='Contagem'
             )
@@ -679,11 +668,18 @@ def panelDash():
         df_fund.sort_values(by='data', inplace=True)
 
         df_fund_filtered = df_fund[(df_fund['data'] >= start_date) & (df_fund['data'] <= end_date)]
+
+        if aluno == 'Todos':
+            df_fund_filtered = df_fund_filtered.copy()
+        else:
+            matricula = alunos_df.loc[alunos_df['Nome_Completo'] == aluno, 'Matricula'].values[0]  
+            df_fund_filtered = df_fund_filtered[df_fund_filtered['matricula'] == matricula]
+
         df_fund_sum = df_fund_filtered.groupby('data').agg({'pontuacao': 'sum'}).reset_index()
         df_fund_sum.rename(columns={'nivel_risco': 'Contagem'}, inplace=True)
         df_fund_sum = df_fund_sum.sort_values(by='data')
 
-        fig_fund = px.line(df_fund_sum, x='data', y='pontuacao', title='Evolução da Pontuação Total ao Longo do Tempo')
+        fig_fund = px.line(df_fund_sum, x='data', y='pontuacao', title='Evolução do Índice ao Longo do Tempo')
         fig_fund.update_layout(xaxis_title='Data', yaxis_title='Pontuação Total')
         st.plotly_chart(fig_fund, style = style, use_container_width=True)
 
@@ -696,10 +692,10 @@ def panelDash():
         fig_fund2 = go.Figure()
         fig_fund2.add_trace(go.Scatter(x=df_fund_seas.index, y=results_fund.seasonal, mode='lines', name='Sazonalidade'))
         fig_fund2.add_trace(go.Scatter(x=df_fund_seas.index, y=rolling_fund_avg, mode='lines', name='Média Móvel (30 dias)'))
-        fig_fund2.update_layout(title='Sazonalidade com Média Móvel (30 dias) do Último Ano', xaxis_title='Data', yaxis_title='Valor')
+        fig_fund2.update_layout(title='Sazonalidade e Média Móvel', xaxis_title='Data', yaxis_title='Valor')
         st.plotly_chart(fig_fund2, style=style, use_container_width=True)
 
-        recent_data = df_fund[df_fund['data'] == df_fund['data'].max()]
+        recent_data = df_fund_filtered[df_fund_filtered['data'] == df_fund_filtered['data'].max()]
 
         mapper_fundamental = {
             "resolve_problemas_matematicos": "A criança consegue resolver problemas matemáticos simples envolvendo adição, subtração, multiplicação e divisão?",
@@ -722,7 +718,7 @@ def panelDash():
 
         fig3fund.update_layout(
             barmode='group', 
-            title='Contagem de Respostas no Último Registro',
+            title='Respostas nas Últimas Avaliações',
             xaxis_title='Resposta', 
             yaxis_title='Contagem'
         )
@@ -735,19 +731,19 @@ def panelDash():
             fig_risco = go.Figure(go.Bar(x=contagem_risco.index, y=contagem_risco.values))
 
             fig_risco.update_layout(
-                title='Contagem de Risco no Último Registro',
+                title='Risco nas Últimas Avaliações',
                 xaxis_title='Risco', 
                 yaxis_title='Contagem'
             )
             
             st.plotly_chart(fig_risco, style=style, use_container_width=True)
         with col2:
-            contagem_risco_g = df_fund['nivel_risco'].value_counts()
+            contagem_risco_g = df_fund_filtered['nivel_risco'].value_counts()
 
             fig_risco_g = go.Figure(go.Bar(x=contagem_risco_g.index, y=contagem_risco_g.values))
 
             fig_risco_g.update_layout(
-                title='Contagem de Risco Geral',
+                title='Risco Geral',
                 xaxis_title='Risco', 
                 yaxis_title='Contagem'
             )
@@ -765,11 +761,18 @@ def panelDash():
         df_fund2.sort_values(by='data', inplace=True)
 
         df_fund2_filtered = df_fund2[(df_fund2['data'] >= start_date) & (df_fund2['data'] <= end_date)]
+
+        if aluno == 'Todos':
+            df_fund2_filtered = df_fund2_filtered.copy()
+        else:
+            matricula = alunos_df.loc[alunos_df['Nome_Completo'] == aluno, 'Matricula'].values[0]  
+            df_fund2_filtered = df_fund2_filtered[df_fund2_filtered['matricula'] == matricula]
+    
         df_fund2_sum = df_fund2_filtered.groupby('data').agg({'pontuacao': 'sum'}).reset_index()
         df_fund2_sum.rename(columns={'nivel_risco': 'Contagem'}, inplace=True)
         df_fund2_sum = df_fund2_sum.sort_values(by='data')
 
-        fig_fund2 = px.line(df_fund2_sum, x='data', y='pontuacao', title='Evolução da Pontuação Total ao Longo do Tempo')
+        fig_fund2 = px.line(df_fund2_sum, x='data', y='pontuacao', title='Evolução do Índice ao Longo do Tempo')
         fig_fund2.update_layout(xaxis_title='Data', yaxis_title='Pontuação Total')
         st.plotly_chart(fig_fund2, style = style, use_container_width=True)
 
@@ -782,10 +785,10 @@ def panelDash():
         fig_fund2 = go.Figure()
         fig_fund2.add_trace(go.Scatter(x=df_fund_seas.index, y=results_fund.seasonal, mode='lines', name='Sazonalidade'))
         fig_fund2.add_trace(go.Scatter(x=df_fund_seas.index, y=rolling_fund_avg, mode='lines', name='Média Móvel (30 dias)'))
-        fig_fund2.update_layout(title='Sazonalidade com Média Móvel (30 dias) do Último Ano', xaxis_title='Data', yaxis_title='Valor')
+        fig_fund2.update_layout(title='Sazonalidade e Média Móvel', xaxis_title='Data', yaxis_title='Valor')
         st.plotly_chart(fig_fund2, style=style, use_container_width=True)
 
-        recent_data = df_fund2[df_fund2['data'] == df_fund2['data'].max()]
+        recent_data = df_fund2_filtered[df_fund2_filtered['data'] == df_fund2_filtered['data'].max()]
 
         mapper_fundamental2 = {
             "domina_conceitos_matematicos": "Domina os conceitos matemáticos básicos de frações, decimais e porcentagens?",
@@ -809,7 +812,7 @@ def panelDash():
 
         fig3fund.update_layout(
             barmode='group', 
-            title='Contagem de Respostas no Último Registro',
+            title='Respostas nas Últimas Avaliações',
             xaxis_title='Resposta', 
             yaxis_title='Contagem'
         )
@@ -822,19 +825,19 @@ def panelDash():
             fig_risco = go.Figure(go.Bar(x=contagem_risco.index, y=contagem_risco.values))
 
             fig_risco.update_layout(
-                title='Contagem de Risco no Último Registro',
+                title='Risco nas Últimas Avaliações',
                 xaxis_title='Risco', 
                 yaxis_title='Contagem'
             )
             
             st.plotly_chart(fig_risco, style=style, use_container_width=True)
         with col2:
-            contagem_risco_g = df_fund2['nivel_risco'].value_counts()
+            contagem_risco_g = df_fund2_filtered['nivel_risco'].value_counts()
 
             fig_risco_g = go.Figure(go.Bar(x=contagem_risco_g.index, y=contagem_risco_g.values))
 
             fig_risco_g.update_layout(
-                title='Contagem de Risco Geral',
+                title='Risco Geral',
                 xaxis_title='Risco', 
                 yaxis_title='Contagem'
             )
@@ -852,11 +855,18 @@ def panelDash():
         df_em.sort_values(by='data', inplace=True)
 
         df_em_filtered = df_em[(df_em['data'] >= start_date) & (df_em['data'] <= end_date)]
+
+        if aluno == 'Todos':
+            df_em_filtered = df_em_filtered.copy()
+        else:
+            matricula = alunos_df.loc[alunos_df['Nome_Completo'] == aluno, 'Matricula'].values[0]  
+            df_em_filtered = df_em_filtered[df_em_filtered['matricula'] == matricula]
+
         df_em_sum = df_em_filtered.groupby('data').agg({'pontuacao': 'sum'}).reset_index()
         df_em_sum.rename(columns={'nivel_risco': 'Contagem'}, inplace=True)
         df_em_sum = df_em_sum.sort_values(by='data')
 
-        fig_fund2 = px.line(df_em_sum, x='data', y='pontuacao', title='Evolução da Pontuação Total ao Longo do Tempo')
+        fig_fund2 = px.line(df_em_sum, x='data', y='pontuacao', title='Evolução do Índice ao Longo do Tempo')
         fig_fund2.update_layout(xaxis_title='Data', yaxis_title='Pontuação Total')
         st.plotly_chart(fig_fund2, style = style, use_container_width=True)
 
@@ -869,10 +879,10 @@ def panelDash():
         fig_fund2 = go.Figure()
         fig_fund2.add_trace(go.Scatter(x=df_fund_seas.index, y=results_fund.seasonal, mode='lines', name='Sazonalidade'))
         fig_fund2.add_trace(go.Scatter(x=df_fund_seas.index, y=rolling_fund_avg, mode='lines', name='Média Móvel (30 dias)'))
-        fig_fund2.update_layout(title='Sazonalidade com Média Móvel (30 dias) do Último Ano', xaxis_title='Data', yaxis_title='Valor')
+        fig_fund2.update_layout(title='Sazonalidade e Média Móvel', xaxis_title='Data', yaxis_title='Valor')
         st.plotly_chart(fig_fund2, style=style, use_container_width=True)
 
-        recent_data = df_em[df_em['data'] == df_em['data'].max()]
+        recent_data = df_em_filtered[df_em_filtered['data'] == df_em_filtered['data'].max()]
 
         mapper_ensino_medio = {
             "utiliza_metodos_matematicos": "Ele utiliza diferentes métodos e estratégias para resolver problemas matemáticos de forma eficiente?",
@@ -896,7 +906,7 @@ def panelDash():
 
         fig3fund.update_layout(
             barmode='group', 
-            title='Contagem de Respostas no Último Registro',
+            title='Respostas nas Últimas Avaliações',
             xaxis_title='Resposta', 
             yaxis_title='Contagem'
         )
@@ -909,14 +919,14 @@ def panelDash():
             fig_risco = go.Figure(go.Bar(x=contagem_risco.index, y=contagem_risco.values))
 
             fig_risco.update_layout(
-                title='Contagem de Risco no Último Registro',
+                title='Risco nas Últimas Avaliações',
                 xaxis_title='Risco', 
                 yaxis_title='Contagem'
             )
             
             st.plotly_chart(fig_risco, style=style, use_container_width=True)
         with col2:
-            contagem_risco_g = df_em['nivel_risco'].value_counts()
+            contagem_risco_g = df_em_filtered['nivel_risco'].value_counts()
 
             fig_risco_g = go.Figure(go.Bar(x=contagem_risco_g.index, y=contagem_risco_g.values))
 
@@ -996,7 +1006,7 @@ def panelDash():
         df_pontuacoes['data'] = df_ida_a_filtered['data']
         df_media_por_materia = df_pontuacoes.groupby('data').mean().reset_index()
 
-        recent_ida_a_data = df_ida_a[df_ida_a['data'] == df_ida_a['data'].max()]
+        recent_ida_a_data = df_ida_a_filtered[df_ida_a_filtered['data'] == df_ida_a_filtered['data'].max()]
         df_pontuacoes_g = recent_ida_a_data.iloc[:, 2:-1].rename(columns=mapper_materias)
         df_pontuacoes_g['data'] = recent_ida_a_data['data']
         df_media_por_materia_g = df_pontuacoes_g.groupby('data').mean().reset_index()
@@ -1057,7 +1067,7 @@ def panelDash():
         fig_ida_a4 = go.Figure()
         fig_ida_a4.add_trace(go.Scatter(x=df_ida_a.index, y=results.seasonal, mode='lines', name='Sazonalidade'))
         fig_ida_a4.add_trace(go.Scatter(x=df_ida_a.index, y=rolling_avg, mode='lines', name='Média Móvel (30 dias)'))
-        fig_ida_a4.update_layout(title='Sazonalidade com Média Móvel (30 dias) do Último Ano', xaxis_title='Data', yaxis_title='Valor')
+        fig_ida_a4.update_layout(title='Sazonalidade e Média Móvel', xaxis_title='Data', yaxis_title='Valor')
 
         st.plotly_chart(fig_ida_a4, style=style, use_container_width=True)
 
@@ -1068,6 +1078,13 @@ def panelDash():
         df_ida_f['data'] = pd.to_datetime(df_ida_f['data']).dt.date
 
         df_ida_f_filtered = df_ida_f[(df_ida_f['data'] >= start_date) & (df_ida_f['data'] <= end_date)]
+
+        if aluno == 'Todos':
+            df_ida_f_filtered = df_ida_f_filtered.copy()
+        else:
+            matricula = alunos_df.loc[alunos_df['Nome_Completo'] == aluno, 'Matricula'].values[0]  
+            df_ida_f_filtered = df_ida_f_filtered[df_ida_f_filtered['matricula'] == matricula]
+
         cols_pontuacao = df_ida_f_filtered.columns[2:-1]
         df_ida_f_filtered['media'] = df_ida_f_filtered[cols_pontuacao].mean(axis=1)
 
@@ -1094,7 +1111,7 @@ def panelDash():
         df_ida_f_pontuacoes['data'] = df_ida_f_filtered['data']
         df_ida_f_media_por_materia = df_ida_f_pontuacoes.groupby('data').mean().reset_index()
 
-        recent_ida_f_data = df_ida_f[df_ida_f['data'] == df_ida_f['data'].max()]
+        recent_ida_f_data = df_ida_f_filtered[df_ida_f_filtered['data'] == df_ida_f_filtered['data'].max()]
         df_ida_f_pontuacoes_g = recent_ida_f_data.iloc[:, 2:-1].rename(columns=mapper_materias)
         df_ida_f_pontuacoes_g['data'] = recent_ida_f_data['data']
         df_ida_f_media_por_materia_g = df_ida_f_pontuacoes_g.groupby('data').mean().reset_index()
@@ -1155,7 +1172,7 @@ def panelDash():
         fig_ida_f4 = go.Figure()
         fig_ida_f4.add_trace(go.Scatter(x=df_ida_f.index, y=results_ida_f.seasonal, mode='lines', name='Sazonalidade'))
         fig_ida_f4.add_trace(go.Scatter(x=df_ida_f.index, y=rolling_avg_ida_f, mode='lines', name='Média Móvel (30 dias)'))
-        fig_ida_f4.update_layout(title='Sazonalidade com Média Móvel (30 dias) do Último Ano', xaxis_title='Data', yaxis_title='Valor')
+        fig_ida_f4.update_layout(title='Sazonalidade e Média Móvel', xaxis_title='Data', yaxis_title='Valor')
 
         st.plotly_chart(fig_ida_f4, style=style, use_container_width=True)
 
@@ -1167,6 +1184,13 @@ def panelDash():
         df_ida_f2['data'] = pd.to_datetime(df_ida_f2['data']).dt.date
 
         df_ida_f2_filtered = df_ida_f2[(df_ida_f2['data'] >= start_date) & (df_ida_f2['data'] <= end_date)]
+
+        if aluno == 'Todos':
+            df_ida_f2_filtered = df_ida_f2_filtered.copy()
+        else:
+            matricula = alunos_df.loc[alunos_df['Nome_Completo'] == aluno, 'Matricula'].values[0]  
+            df_ida_f2_filtered = df_ida_f2_filtered[df_ida_f2_filtered['matricula'] == matricula]
+
         cols_pontuacao = df_ida_f2_filtered.columns[2:-1]
         df_ida_f2_filtered['media'] = df_ida_f2_filtered[cols_pontuacao].mean(axis=1)
 
@@ -1193,7 +1217,7 @@ def panelDash():
         df_ida_f2_pontuacoes['data'] = df_ida_f2_filtered['data']
         df_ida_f2_media_por_materia = df_ida_f2_pontuacoes.groupby('data').mean().reset_index()
 
-        recent_ida_f2_data = df_ida_f2[df_ida_f2['data'] == df_ida_f2['data'].max()]
+        recent_ida_f2_data = df_ida_f2_filtered[df_ida_f2_filtered['data'] == df_ida_f2_filtered['data'].max()]
         df_ida_f2_pontuacoes_g = recent_ida_f2_data.iloc[:, 2:-1].rename(columns=mapper_materias)
         df_ida_f2_pontuacoes_g['data'] = recent_ida_f2_data['data']
         df_ida_f2_media_por_materia_g = df_ida_f2_pontuacoes_g.groupby('data').mean().reset_index()
@@ -1254,7 +1278,7 @@ def panelDash():
         fig_ida_f24 = go.Figure()
         fig_ida_f24.add_trace(go.Scatter(x=df_ida_f2.index, y=results_ida_f2.seasonal, mode='lines', name='Sazonalidade'))
         fig_ida_f24.add_trace(go.Scatter(x=df_ida_f2.index, y=rolling_avg_ida_f2, mode='lines', name='Média Móvel (30 dias)'))
-        fig_ida_f24.update_layout(title='Sazonalidade com Média Móvel (30 dias) do Último Ano', xaxis_title='Data', yaxis_title='Valor')
+        fig_ida_f24.update_layout(title='Sazonalidade e Média Móvel', xaxis_title='Data', yaxis_title='Valor')
 
         st.plotly_chart(fig_ida_f24, style=style, use_container_width=True)
 
@@ -1266,6 +1290,13 @@ def panelDash():
         df_ida_em['data'] = pd.to_datetime(df_ida_em['data']).dt.date
 
         df_ida_em_filtered = df_ida_em[(df_ida_em['data'] >= start_date) & (df_ida_em['data'] <= end_date)]
+
+        if aluno == 'Todos':
+            df_ida_em_filtered = df_ida_em_filtered.copy()
+        else:
+            matricula = alunos_df.loc[alunos_df['Nome_Completo'] == aluno, 'Matricula'].values[0]  
+            df_ida_em_filtered = df_ida_em_filtered[df_ida_em_filtered['matricula'] == matricula]
+
         cols_pontuacao = df_ida_em_filtered.columns[2:-1]
         df_ida_em_filtered['media'] = df_ida_em_filtered[cols_pontuacao].mean(axis=1)
 
@@ -1297,7 +1328,7 @@ def panelDash():
         df_ida_em_pontuacoes['data'] = df_ida_em_filtered['data']
         df_ida_em_media_por_materia = df_ida_em_pontuacoes.groupby('data').mean().reset_index()
 
-        recent_ida_em_data = df_ida_em[df_ida_em['data'] == df_ida_em['data'].max()]
+        recent_ida_em_data = df_ida_em_filtered[df_ida_em_filtered['data'] == df_ida_em_filtered['data'].max()]
         df_ida_em_pontuacoes_g = recent_ida_em_data.iloc[:, 2:-1].rename(columns=mapper_materias)
         df_ida_em_pontuacoes_g['data'] = recent_ida_em_data['data']
         df_ida_em_media_por_materia_g = df_ida_em_pontuacoes_g.groupby('data').mean().reset_index()
@@ -1358,7 +1389,7 @@ def panelDash():
         fig_ida_em4 = go.Figure()
         fig_ida_em4.add_trace(go.Scatter(x=df_ida_em.index, y=results_ida_em.seasonal, mode='lines', name='Sazonalidade'))
         fig_ida_em4.add_trace(go.Scatter(x=df_ida_em.index, y=rolling_avg_ida_em, mode='lines', name='Média Móvel (30 dias)'))
-        fig_ida_em4.update_layout(title='Sazonalidade com Média Móvel (30 dias) do Último Ano', xaxis_title='Data', yaxis_title='Valor')
+        fig_ida_em4.update_layout(title='Sazonalidade e Média Móvel', xaxis_title='Data', yaxis_title='Valor')
 
         st.plotly_chart(fig_ida_em4, style=style, use_container_width=True)
 
@@ -1412,7 +1443,7 @@ def panelDash():
         df_ieg_sum.rename(columns={'nivel_risco': 'Contagem'}, inplace=True)
         df_ieg_sum = df_ieg_sum.sort_values(by='data')
 
-        fig_ieg = px.line(df_ieg_sum, x='data', y='pontuacao', title='Evolução da Pontuação Total ao Longo do Tempo')
+        fig_ieg = px.line(df_ieg_sum, x='data', y='pontuacao', title='Evolução do Índice ao Longo do Tempo')
         fig_ieg.update_layout(xaxis_title='Data', yaxis_title='Pontuação Total')
         st.plotly_chart(fig_ieg, style = style, use_container_width=True)
 
@@ -1426,10 +1457,10 @@ def panelDash():
 
         fig_ieg1.add_trace(go.Scatter(x=df_ieg_seas.index, y=results_ieg.seasonal, mode='lines', name='Sazonalidade'))
         fig_ieg1.add_trace(go.Scatter(x=df_ieg_seas.index, y=rolling_ieg_avg, mode='lines', name='Média Móvel (30 dias)'))
-        fig_ieg1.update_layout(title='Sazonalidade com Média Móvel (30 dias) do Último Ano', xaxis_title='Data', yaxis_title='Valor')
+        fig_ieg1.update_layout(title='Sazonalidade e Média Móvel', xaxis_title='Data', yaxis_title='Valor')
         st.plotly_chart(fig_ieg1, style=style, use_container_width=True)
 
-        recent_ieg_data = df_ieg[df_ieg['data'] == df_ieg['data'].max()]
+        recent_ieg_data = df_ieg_filtered[df_ieg_filtered['data'] == df_ieg_filtered['data'].max()]
 
         mapper_ieg = {
             "interesse_entusiasmo_aulas": "O aluno demonstra interesse e entusiasmo durante as aulas?",
@@ -1453,7 +1484,7 @@ def panelDash():
 
         fig_ieg2.update_layout(
             barmode='group', 
-            title='Contagem de Respostas no Último Registro',
+            title='Respostas nas Últimas Avaliações',
             xaxis_title='Resposta', 
             yaxis_title='Contagem'
         )
@@ -1466,14 +1497,14 @@ def panelDash():
             fig_risco_ieg = go.Figure(go.Bar(x=contagem_risco_ieg.index, y=contagem_risco_ieg.values))
 
             fig_risco_ieg.update_layout(
-                title='Contagem de Risco no Último Registro',
+                title='Risco nas Últimas Avaliações',
                 xaxis_title='Risco', 
                 yaxis_title='Contagem'
             )
             
             st.plotly_chart(fig_risco_ieg, style=style, use_container_width=True)
         with col2:
-            contagem_risco_ieg_g = df_ieg['nivel_risco'].value_counts()
+            contagem_risco_ieg_g = df_ieg_filtered['nivel_risco'].value_counts()
 
             fig_risco_ieg_g = go.Figure(go.Bar(x=contagem_risco_ieg_g.index, y=contagem_risco_ieg_g.values))
 
@@ -1535,7 +1566,7 @@ def panelDash():
         df_iaa_sum.rename(columns={'nivel_risco': 'Contagem'}, inplace=True)
         df_iaa_sum = df_iaa_sum.sort_values(by='data')
 
-        fig_iaa = px.line(df_iaa_sum, x='data', y='pontuacao', title='Evolução da Pontuação Total ao Longo do Tempo')
+        fig_iaa = px.line(df_iaa_sum, x='data', y='pontuacao', title='Evolução do Índice ao Longo do Tempo')
         fig_iaa.update_layout(xaxis_title='Data', yaxis_title='Pontuação Total')
         st.plotly_chart(fig_iaa, style = style, use_container_width=True)
 
@@ -1549,10 +1580,10 @@ def panelDash():
 
         fig_iaa1.add_trace(go.Scatter(x=df_iaa_seas.index, y=results_iaa.seasonal, mode='lines', name='Sazonalidade'))
         fig_iaa1.add_trace(go.Scatter(x=df_iaa_seas.index, y=rolling_iaa_avg, mode='lines', name='Média Móvel (30 dias)'))
-        fig_iaa1.update_layout(title='Sazonalidade com Média Móvel (30 dias) do Último Ano', xaxis_title='Data', yaxis_title='Valor')
+        fig_iaa1.update_layout(title='Sazonalidade e Média Móvel', xaxis_title='Data', yaxis_title='Valor')
         st.plotly_chart(fig_iaa1, style=style, use_container_width=True)
 
-        recent_iaa_data = df_iaa[df_iaa['data'] == df_iaa['data'].max()]
+        recent_iaa_data = df_iaa_filtered[df_iaa_filtered['data'] == df_iaa_filtered['data'].max()]
 
         mapper_iaa = {
             "faz_perguntas_tira_duvidas": "Ele faz perguntas e busca tirar dúvidas quando necessário?",
@@ -1576,7 +1607,7 @@ def panelDash():
 
         fig_iaa2.update_layout(
             barmode='group', 
-            title='Contagem de Respostas no Último Registro',
+            title='Respostas nas Últimas Avaliações',
             xaxis_title='Resposta', 
             yaxis_title='Contagem'
         )
@@ -1589,19 +1620,19 @@ def panelDash():
             fig_risco_iaa = go.Figure(go.Bar(x=contagem_risco_iaa.index, y=contagem_risco_iaa.values))
 
             fig_risco_iaa.update_layout(
-                title='Contagem de Risco no Último Registro',
+                title='Risco nas Últimas Avaliações',
                 xaxis_title='Risco', 
                 yaxis_title='Contagem'
             )
             
             st.plotly_chart(fig_risco_iaa, style=style, use_container_width=True)
         with col2:
-            contagem_risco_iaa_g = df_iaa['nivel_risco'].value_counts()
+            contagem_risco_iaa_g = df_iaa_filtered['nivel_risco'].value_counts()
 
             fig_risco_iaa_g = go.Figure(go.Bar(x=contagem_risco_iaa_g.index, y=contagem_risco_iaa_g.values))
 
             fig_risco_iaa_g.update_layout(
-                title='Contagem de Risco Geral',
+                title='Risco Geral',
                 xaxis_title='Risco', 
                 yaxis_title='Contagem'
             )
@@ -1658,7 +1689,7 @@ def panelDash():
         df_ips_sum.rename(columns={'nivel_risco': 'Contagem'}, inplace=True)
         df_ips_sum = df_ips_sum.sort_values(by='data')
 
-        fig_ips = px.line(df_ips_sum, x='data', y='pontuacao', title='Evolução da Pontuação Total ao Longo do Tempo')
+        fig_ips = px.line(df_ips_sum, x='data', y='pontuacao', title='Evolução do Índice ao Longo do Tempo')
         fig_ips.update_layout(xaxis_title='Data', yaxis_title='Pontuação Total')
         st.plotly_chart(fig_ips, style = style, use_container_width=True)
 
@@ -1672,10 +1703,10 @@ def panelDash():
 
         fig_ips1.add_trace(go.Scatter(x=df_ips_seas.index, y=results_ips.seasonal, mode='lines', name='Sazonalidade'))
         fig_ips1.add_trace(go.Scatter(x=df_ips_seas.index, y=rolling_ips_avg, mode='lines', name='Média Móvel (30 dias)'))
-        fig_ips1.update_layout(title='Sazonalidade com Média Móvel (30 dias) do Último Ano', xaxis_title='Data', yaxis_title='Valor')
+        fig_ips1.update_layout(title='Sazonalidade e Média Móvel', xaxis_title='Data', yaxis_title='Valor')
         st.plotly_chart(fig_ips1, style=style, use_container_width=True)
 
-        recent_ips_data = df_ips[df_ips['data'] == df_ips['data'].max()]
+        recent_ips_data = df_ips_filtered[df_ips_filtered['data'] == df_ips_filtered['data'].max()]
 
         mapper_ips = {
                 "bom_relacionamento_familiares": "Ambiente Familiar: Você tem um bom relacionamento com seus familiares?",
@@ -1699,7 +1730,7 @@ def panelDash():
 
         fig_ips2.update_layout(
             barmode='group', 
-            title='Contagem de Respostas no Último Registro',
+            title='Respostas nas Últimas Avaliações',
             xaxis_title='Resposta', 
             yaxis_title='Contagem'
         )
@@ -1712,19 +1743,19 @@ def panelDash():
             fig_risco_ips = go.Figure(go.Bar(x=contagem_risco_ips.index, y=contagem_risco_ips.values))
 
             fig_risco_ips.update_layout(
-                title='Contagem de Risco no Último Registro',
+                title='Risco nas Últimas Avaliações',
                 xaxis_title='Risco', 
                 yaxis_title='Contagem'
             )
             
             st.plotly_chart(fig_risco_ips, style=style, use_container_width=True)
         with col2:
-            contagem_risco_ips_g = df_ips['nivel_risco'].value_counts()
+            contagem_risco_ips_g = df_ips_filtered['nivel_risco'].value_counts()
 
             fig_risco_ips_g = go.Figure(go.Bar(x=contagem_risco_ips_g.index, y=contagem_risco_ips_g.values))
 
             fig_risco_ips_g.update_layout(
-                title='Contagem de Risco Geral',
+                title='Risco Geral',
                 xaxis_title='Risco', 
                 yaxis_title='Contagem'
             )
@@ -1781,7 +1812,7 @@ def panelDash():
         df_ipp_sum.rename(columns={'nivel_risco': 'Contagem'}, inplace=True)
         df_ipp_sum = df_ipp_sum.sort_values(by='data')
 
-        fig_ipp = px.line(df_ipp_sum, x='data', y='pontuacao', title='Evolução da Pontuação Total ao Longo do Tempo')
+        fig_ipp = px.line(df_ipp_sum, x='data', y='pontuacao', title='Evolução do Índice ao Longo do Tempo')
         fig_ipp.update_layout(xaxis_title='Data', yaxis_title='Pontuação Total')
         st.plotly_chart(fig_ipp, style = style, use_container_width=True)
 
@@ -1795,10 +1826,10 @@ def panelDash():
 
         fig_ipp1.add_trace(go.Scatter(x=df_ipp_seas.index, y=results_ipp.seasonal, mode='lines', name='Sazonalidade'))
         fig_ipp1.add_trace(go.Scatter(x=df_ipp_seas.index, y=rolling_ipp_avg, mode='lines', name='Média Móvel (30 dias)'))
-        fig_ipp1.update_layout(title='Sazonalidade com Média Móvel (30 dias) do Último Ano', xaxis_title='Data', yaxis_title='Valor')
+        fig_ipp1.update_layout(title='Sazonalidade e Média Móvel', xaxis_title='Data', yaxis_title='Valor')
         st.plotly_chart(fig_ipp1, style=style, use_container_width=True)
 
-        recent_ipp_data = df_ipp[df_ipp['data'] == df_ipp['data'].max()]
+        recent_ipp_data = df_ipp_filtered[df_ipp_filtered['data'] == df_ipp_filtered['data'].max()]
 
         mapper_ipp = {
             "participa_ativamente_responde_perguntas_clareza": "Aprendizagem: Ele participa ativamente das aulas e responde às perguntas com clareza?",
@@ -1822,7 +1853,7 @@ def panelDash():
 
         fig_ipp2.update_layout(
             barmode='group', 
-            title='Contagem de Respostas no Último Registro',
+            title='Respostas nas Últimas Avaliações',
             xaxis_title='Resposta', 
             yaxis_title='Contagem'
         )
@@ -1835,19 +1866,19 @@ def panelDash():
             fig_risco_ipp = go.Figure(go.Bar(x=contagem_risco_ipp.index, y=contagem_risco_ipp.values))
 
             fig_risco_ipp.update_layout(
-                title='Contagem de Risco no Último Registro',
+                title='Risco nas Últimas Avaliações',
                 xaxis_title='Risco', 
                 yaxis_title='Contagem'
             )
             
             st.plotly_chart(fig_risco_ipp, style=style, use_container_width=True)
         with col2:
-            contagem_risco_ipp_g = df_ipp['nivel_risco'].value_counts()
+            contagem_risco_ipp_g = df_ipp_filtered['nivel_risco'].value_counts()
 
             fig_risco_ipp_g = go.Figure(go.Bar(x=contagem_risco_ipp_g.index, y=contagem_risco_ipp_g.values))
 
             fig_risco_ipp_g.update_layout(
-                title='Contagem de Risco Geral',
+                title='Risco Geral',
                 xaxis_title='Risco', 
                 yaxis_title='Contagem'
             )
@@ -1904,7 +1935,7 @@ def panelDash():
         df_ipv_sum.rename(columns={'nivel_risco': 'Contagem'}, inplace=True)
         df_ipv_sum = df_ipv_sum.sort_values(by='data')
 
-        fig_ipv = px.line(df_ipv_sum, x='data', y='pontuacao', title='Evolução da Pontuação Total ao Longo do Tempo')
+        fig_ipv = px.line(df_ipv_sum, x='data', y='pontuacao', title='Evolução do Índice ao Longo do Tempo')
         fig_ipv.update_layout(xaxis_title='Data', yaxis_title='Pontuação Total')
         st.plotly_chart(fig_ipv, style = style, use_container_width=True)
 
@@ -1918,10 +1949,10 @@ def panelDash():
 
         fig_ipv1.add_trace(go.Scatter(x=df_ipv_seas.index, y=results_ipv.seasonal, mode='lines', name='Sazonalidade'))
         fig_ipv1.add_trace(go.Scatter(x=df_ipv_seas.index, y=rolling_ipv_avg, mode='lines', name='Média Móvel (30 dias)'))
-        fig_ipv1.update_layout(title='Sazonalidade com Média Móvel (30 dias) do Último Ano', xaxis_title='Data', yaxis_title='Valor')
+        fig_ipv1.update_layout(title='Sazonalidade e Média Móvel', xaxis_title='Data', yaxis_title='Valor')
         st.plotly_chart(fig_ipv1, style=style, use_container_width=True)
 
-        recent_ipv_data = df_ipv[df_ipv['data'] == df_ipv['data'].max()]
+        recent_ipv_data = df_ipv_filtered[df_ipv_filtered['data'] == df_ipv_filtered['data'].max()]
 
         mapper_ipv = {
             "sabe_identificar_interesses_habilidades_paixoes": "Autoconhecimento: Você sabe identificar seus principais interesses, habilidades e paixões?",
@@ -1945,7 +1976,7 @@ def panelDash():
 
         fig_ipv2.update_layout(
             barmode='group', 
-            title='Contagem de Respostas no Último Registro',
+            title='Respostas nas Últimas Avaliações',
             xaxis_title='Resposta', 
             yaxis_title='Contagem'
         )
@@ -1958,19 +1989,19 @@ def panelDash():
             fig_risco_ipv = go.Figure(go.Bar(x=contagem_risco_ipv.index, y=contagem_risco_ipv.values))
 
             fig_risco_ipv.update_layout(
-                title='Contagem de Risco no Último Registro',
+                title='Risco nas Últimas Avaliações',
                 xaxis_title='Risco', 
                 yaxis_title='Contagem'
             )
             
             st.plotly_chart(fig_risco_ipv, style=style, use_container_width=True)
         with col2:
-            contagem_risco_ipv_g = df_ipv['nivel_risco'].value_counts()
+            contagem_risco_ipv_g = df_ipv_filtered['nivel_risco'].value_counts()
 
             fig_risco_ipv_g = go.Figure(go.Bar(x=contagem_risco_ipv_g.index, y=contagem_risco_ipv_g.values))
 
             fig_risco_ipv_g.update_layout(
-                title='Contagem de Risco Geral',
+                title='Risco Geral',
                 xaxis_title='Risco', 
                 yaxis_title='Contagem'
             )
@@ -2142,16 +2173,115 @@ def panelDash():
         # st.dataframe(df_cadastro)
     
     with tab9:
+        docentes = sql("select * from Docentes")
+        docentes_agrupados = docentes.groupby(['Ano', 'Etapa_ensino'])['Docentes'].sum().reset_index()
+        fig = px.line(docentes_agrupados, x='Ano', y='Docentes', color='Etapa_ensino', title='Quantidade de Docentes por Etapa de Ensino ao longo dos Anos')
+        st.plotly_chart(fig, style=style, use_container_width=True)
         st.markdown('***')
-        st.dataframe(sql("select * from Docentes"))
+
+        escolas = sql("select * from Escolas")
+        escolas_agrupadas_urbana = escolas[escolas['Localizacao'] == 'Urbana'].groupby(['Ano', 'Etapa_ensino'])['Escolas'].sum().reset_index()
+        escolas_agrupadas_rural = escolas[escolas['Localizacao'] == 'Rural'].groupby(['Ano', 'Etapa_ensino'])['Escolas'].sum().reset_index()
+
+        fig_urbana = px.line(escolas_agrupadas_urbana, x='Ano', y='Escolas', color='Etapa_ensino', title='Quantidade de Escolas por Etapa de Ensino (Urbana)')
+        st.plotly_chart(fig_urbana, use_container_width=True)
+
+        fig_rural = px.line(escolas_agrupadas_rural, x='Ano', y='Escolas', color='Etapa_ensino', title='Quantidade de Escolas por Etapa de Ensino (Rural)')
+        st.plotly_chart(fig_rural, use_container_width=True)
+
         st.markdown('***')
-        st.dataframe(sql("select * from Escolas"))
-        st.markdown('***')
-        st.dataframe(sql("select * from Matriculas"))
-        
+        matriculas = sql("select * from Matriculas")
+        matriculas_agrupadas_urbana = matriculas[matriculas['Localizacao'] == 'Urbana'].groupby(['Ano', 'Etapa_ensino'])['Matriculas'].sum().reset_index()
+        matriculas_agrupadas_rural = matriculas[matriculas['Localizacao'] == 'Rural'].groupby(['Ano', 'Etapa_ensino'])['Matriculas'].sum().reset_index()
+
+        fig_urbana = px.line(matriculas_agrupadas_urbana, x='Ano', y='Matriculas', color='Etapa_ensino', title='Quantidade de Matriculas por Etapa de Ensino (Urbana)')
+        st.plotly_chart(fig_urbana, use_container_width=True)
+
+        fig_rural = px.line(matriculas_agrupadas_rural, x='Ano', y='Matriculas', color='Etapa_ensino', title='Quantidade de Matriculas por Etapa de Ensino (Rural)')
+        st.plotly_chart(fig_rural, use_container_width=True)
+
+def painelCadastro():
+    st.markdown('#### Cadastro de Alunos')
+    matricula_n = sql("SELECT MAX(Matricula) matricula FROM CadastroAlunos")
+
+    matricula_atual = int(matricula_n.iloc[0, 0][1:])
+    nova_matricula = f"M{matricula_atual + 1:06d}" 
+    matricula = nova_matricula
+
+    col1, col2 = st.columns([1, 1])
+    with col1:
+        nome = st.text_input('Nome')
+    with col2:
+        sobrenome = st.text_input('Sobrenome')
+
+    col3, col4 = st.columns([1, 1])
+    with col3:
+        data_nascimento = st.date_input('Data de Nascimento')
+    with col4:
+        serie = st.text_input('Série')
+
+    col5, col6 = st.columns([1, 1])
+    with col5:
+        sexo = st.radio('Sexo', ('Masculino', 'Feminino'))
+    with col6:
+        ingresso = st.date_input('Data de Ingresso')
+
+    col7, col8 = st.columns([1, 1])
+    with col7:
+        evasao = st.date_input('Evasão', None)
+    with col8:
+        data_conclusao = st.date_input('Data da Conclusão', None)
+
+    col9, col10 = st.columns([1, 1])
+    with col9:
+        bolsista_ou_escola_publica = st.selectbox('Bolsista ou Escola Pública', ['Bolsista', 'Escola pública'])
+    with col10:
+        instituicao_onde_estuda = st.selectbox('Instituição Onde Estuda', ['Centro', 'Filipinho', 'Cipó', 'Granjinha'])
+
+    col11, col12 = st.columns([1, 1])
+    with col11:
+        endereco = st.text_input('Endereço')
+    with col12:
+        telefone = st.text_input('Telefone')
+
+    if st.button('Cadastrar', key='cadastroaluno'):
+        df_cadastro = criar_df_cadastro(matricula, nome, sobrenome, data_nascimento, serie, sexo, ingresso, 
+                                         evasao, data_conclusao, bolsista_ou_escola_publica, 
+                                         instituicao_onde_estuda, endereco, telefone)
+
+
+        questionario_salvo = CadastroAlunoSalvo(df_cadastro)
+        result = questionario_salvo.save()
+        if result:
+            del df_cadastro
+            st.success('Cadastro realizado com sucesso!')
+
+def criar_df_cadastro(matricula, nome, sobrenome, data_nascimento, serie, sexo, ingresso, evasao, 
+                      data_conclusao, bolsista_ou_escola_publica, instituicao_onde_estuda, 
+                      endereco, telefone):
+    data = {
+        'Matricula': [matricula],
+        'Nome': [nome],
+        'Sobrenome': [sobrenome],
+        'Data_de_Nascimento': [data_nascimento],
+        'Serie': [serie],
+        'Sexo': [sexo],
+        'Ingresso': [ingresso],
+        'Evasao': [evasao],
+        'Data_da_Conclusao': [data_conclusao],
+        'Bolsista_ou_Escola_Publica': [bolsista_ou_escola_publica],
+        'Instituicao_Onde_Estuda': [instituicao_onde_estuda],
+        'Endereco': [endereco],
+        'Telefone': [telefone]
+    }
+    df = pd.DataFrame(data)
+    return df
+
+
 def main():
     st.set_page_config(page_title='Passos Mágicos', page_icon=':bar_chart:', layout='wide')
-    logo_url = 'https://github.com/MCardosoDev/Tech_Challenge_Fase5/raw/main/PassosMagicos/logo.png'
+    # logo_url = 'https://github.com/MCardosoDev/Tech_Challenge_Fase5/raw/main/PassosMagicos/logo.png'
+    logo_url = './Images/Logo.png'
     st.sidebar.image(logo_url, width=250)
     view = st.sidebar.radio(
             'Painéis',
@@ -2232,6 +2362,9 @@ def main():
             elif user_menu == 'dash':
                 with st.spinner("Carregando o Painel de Acompanhamento..."):
                     panelDash()
+            elif user_menu == 'cadastro':
+                with st.spinner("Carregando o Painel de Acompanhamento..."):
+                    painelCadastro()
 
         session_state = st.session_state
         if 'user_menu' not in session_state:
@@ -2264,50 +2397,59 @@ def main():
             st.write("Abaixo estão os Questionarios dos Indicadores.")
             st.write("----")
             
+            col, col0 = st.columns([1, 2])
+            with col:
+                if st.button("Cadastro Novos Alunos 📝", key='Cadastro', help="Acesse os questionários da plataforma", use_container_width=True):
+                    session_state.user_menu = 'cadastro'
+                    st.rerun()
+            st.markdown('***')
+
             col1, col2, col3 = st.columns([1, 1, 1])
             with col1:
+                st.write("Indicadores de Adequação de Nível.")
                 if st.button("IAN 📝", key='IAN', help="Acesse os questionários da plataforma", use_container_width=True):
                     session_state.user_menu = 'IAN'
                     st.rerun()
-                st.write("Indicadores de Adequação de Nível.")
 
             with col2:
+                st.write("Indicadores de Engajamento.")
                 if st.button("IEG 📝", key='IEG', help="Acesse os questionários da plataforma", use_container_width=True):
                     session_state.user_menu = 'IEG'
                     st.rerun()
-                st.write("Indicadores de Engajamento.")
             
             with col3:
+                st.write("Indicador de AutoAvaliação.")
                 if st.button("IAA 📝", key='IAA', help="Acesse os questionários da plataforma", use_container_width=True):
                     session_state.user_menu = 'IAA'
                     st.rerun()
-                st.write("Indicador de AutoAvaliação.")
-            
+            st.markdown('***')
+
             col7, col8 = st.columns([1, 2])
             with col7:
+                st.write("Indicador de Desenvolvimento Academico")
                 if st.button("IDA 📝", key='IDA', help="Acesse os questionários da plataforma", use_container_width=True):
                     session_state.user_menu = 'IDA'
                     st.rerun()
-                st.write("Indicador de Desenvolvimento Academico")
-            
+            st.markdown('***')
+
             col4, col5, col6 = st.columns([1, 1, 1])
             with col4:
+                st.write("Indicadores Psicopedagógicos")
                 if st.button("IPP 📝", key='IPP', help="Acesse os questionários da plataforma", use_container_width=True):
                     session_state.user_menu = 'IPP'
                     st.rerun()
-                st.write("Indicadores Psicopedagógicos")
             
             with col5:
+                st.write("Indicador Psicossocial")
                 if st.button("IPS 📝", key='IPS', help="Acesse os questionários da plataforma", use_container_width=True):
                     session_state.user_menu = 'IPS'
                     st.rerun()
-                st.write("Indicador Psicossocial")
             
             with col6:
+                st.write("Indicadores do Ponto de Virada")
                 if st.button("IPV 📝", key='IPV', help="Acesse os questionários da plataforma", use_container_width=True):
                     session_state.user_menu = 'IPV'
                     st.rerun()
-                st.write("Indicadores do Ponto de Virada")
         
         if st.sidebar.button("Menu Principal"):
             session_state.user_menu = 'Home'
