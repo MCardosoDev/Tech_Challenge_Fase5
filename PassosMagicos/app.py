@@ -528,7 +528,7 @@ def panelIDA():
 
 def panelDash():
     style = {'width': '100%'}
-    tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs([
                                                         'IAN',
                                                         'IDA',
                                                         'IEG',
@@ -536,8 +536,7 @@ def panelDash():
                                                         'IPS',
                                                         'IPP',
                                                         'IPV',
-                                                        'Alunos',
-                                                        'Dados Externos'
+                                                        'Alunos'
                                                     ])
     with tab1:
         st.markdown("### IAN - Indicadores de adequação de nível", unsafe_allow_html=True)
@@ -2170,36 +2169,6 @@ def panelDash():
 
             st.plotly_chart(fig_c5, style=style, use_container_width=True)
 
-        # st.dataframe(df_cadastro)
-    
-    with tab9:
-        docentes = sql("select * from Docentes")
-        docentes_agrupados = docentes.groupby(['Ano', 'Etapa_ensino'])['Docentes'].sum().reset_index()
-        fig = px.line(docentes_agrupados, x='Ano', y='Docentes', color='Etapa_ensino', title='Quantidade de Docentes por Etapa de Ensino ao longo dos Anos')
-        st.plotly_chart(fig, style=style, use_container_width=True)
-        st.markdown('***')
-
-        escolas = sql("select * from Escolas")
-        escolas_agrupadas_urbana = escolas[escolas['Localizacao'] == 'Urbana'].groupby(['Ano', 'Etapa_ensino'])['Escolas'].sum().reset_index()
-        escolas_agrupadas_rural = escolas[escolas['Localizacao'] == 'Rural'].groupby(['Ano', 'Etapa_ensino'])['Escolas'].sum().reset_index()
-
-        fig_urbana = px.line(escolas_agrupadas_urbana, x='Ano', y='Escolas', color='Etapa_ensino', title='Quantidade de Escolas por Etapa de Ensino (Urbana)')
-        st.plotly_chart(fig_urbana, use_container_width=True)
-
-        fig_rural = px.line(escolas_agrupadas_rural, x='Ano', y='Escolas', color='Etapa_ensino', title='Quantidade de Escolas por Etapa de Ensino (Rural)')
-        st.plotly_chart(fig_rural, use_container_width=True)
-
-        st.markdown('***')
-        matriculas = sql("select * from Matriculas")
-        matriculas_agrupadas_urbana = matriculas[matriculas['Localizacao'] == 'Urbana'].groupby(['Ano', 'Etapa_ensino'])['Matriculas'].sum().reset_index()
-        matriculas_agrupadas_rural = matriculas[matriculas['Localizacao'] == 'Rural'].groupby(['Ano', 'Etapa_ensino'])['Matriculas'].sum().reset_index()
-
-        fig_urbana = px.line(matriculas_agrupadas_urbana, x='Ano', y='Matriculas', color='Etapa_ensino', title='Quantidade de Matriculas por Etapa de Ensino (Urbana)')
-        st.plotly_chart(fig_urbana, use_container_width=True)
-
-        fig_rural = px.line(matriculas_agrupadas_rural, x='Ano', y='Matriculas', color='Etapa_ensino', title='Quantidade de Matriculas por Etapa de Ensino (Rural)')
-        st.plotly_chart(fig_rural, use_container_width=True)
-
 def painelCadastro():
     st.markdown('#### Cadastro de Alunos')
     matricula_n = sql("SELECT MAX(Matricula) matricula FROM CadastroAlunos")
@@ -2293,49 +2262,48 @@ def main():
         )
     
     if view == 'INDE':
-        st.title("Avaliação de Ansiedade e Depressão em Crianças")
-        st.markdown("""
-            A avaliação de ansiedade e depressão em crianças é fundamental para o processo de aprendizagem por diversos motivos:
+        st.markdown("#### METODOLOGIA")
+        st.markdown("##### A organização atende crianças e jovens de 6 a 18 anos, em comunidades de baixa renda em Embu - Guaçu, SP. ")
+        st.image('./Images/image.png')
+        st.markdown("***")
+        st.markdown("##### Índice de Desenvolvimento Educacional")
+        col1, col2 = st.columns([1, 2])
+        with col1:
+            st.markdown("PEGAGÓCIGO: 1")
+        with col2:
+            st.markdown("""
+                IAN - Indicador de Adequação de Nível
 
-            **Impacto no desempenho escolar:**
-            - A ansiedade e a depressão podem prejudicar a capacidade da criança de se concentrar, aprender e lembrar de informações.
-            - Alterações no humor, como tristeza ou irritabilidade, podem afetar a participação em sala de aula e a interação com colegas.
-            - Baixa autoestima e desmotivação podem levar a um declínio no desempenho acadêmico.
 
-            **Detecção precoce e intervenção:**
-            - A avaliação permite identificar crianças que estão sofrendo com esses transtornos, possibilitando a intervenção precoce.
-            - O tratamento adequado pode ajudar a melhorar o humor, a autoestima e a capacidade de aprendizado da criança.
-            - Intervenções direcionadas podem auxiliar na superação de obstáculos e no desenvolvimento de habilidades de enfrentamento.
+                IDA - Indicador de Desempenho Acadêmico
 
-            **Promoção do bem-estar emocional:**
-            - Um ambiente escolar que reconhece e acolhe as necessidades emocionais das crianças contribui para o seu bem-estar geral.
-            - A identificação e o tratamento da ansiedade e da depressão podem ajudar a prevenir o desenvolvimento de outros problemas de saúde mental.
-            - Criar um ambiente seguro e positivo na escola pode fortalecer a resiliência das crianças e promover o desenvolvimento saudável.
 
-            **Adaptação do processo de ensino:**
-            - Compreender as dificuldades emocionais da criança permite que os educadores personalizem o processo de ensino.
-            - Estratégias como adaptações curriculares, apoio individualizado e atividades que estimulem a autoestima podem ser utilizadas.
-            - A comunicação aberta e o apoio da equipe escolar são essenciais para o sucesso da criança.
+                IEG - Indicador de Engajamento
+            """)
+        st.markdown("***")
+        col1, col2 = st.columns([1, 2])
+        with col1:
+            st.markdown("PSICOSSOCIAL: 2")
+        with col2:
+            st.markdown("""
+                IAA - indicador de Autoavaliação
 
-            **Sensibilização e apoio:**
-            - A avaliação pode sensibilizar a comunidade escolar para a importância da saúde mental das crianças.
-            - A escola pode promover atividades de conscientização e combate ao estigma em torno dos transtornos mentais.
-            - Criar uma rede de apoio envolvendo pais, professores, equipe escolar e profissionais de saúde mental é fundamental para o bem-estar da criança.
+                IPS - Indicador Psicossocial
+            """)
+        st.markdown("***")
+        col1, col2 = st.columns([1, 2])
+        with col1:
+            st.markdown("PSICOPEDAGÓCIGO: 3")
+        with col2:
+            st.markdown("""
+                IPP - Indicador PsicoPedagógico
 
-            **Observações:**
-            - É importante conversar com a criança sobre seus sentimentos e observar seu comportamento.
-            - Se você tiver alguma preocupação sobre a saúde mental da criança, procure ajuda profissional.
-            - Utilize este questionário como um guia, e não como um diagnóstico definitivo.
+                IPV - Indicador de Ponto de virada
+            """)
+        st.markdown("***")
+        st.markdown("##### Ponderação Dos Indicaroes no INDE")
+        st.image('./Images/inde.png')
 
-            **Dicas para conversar com a criança:**
-            - Escolha um momento e lugar calmo para conversar.
-            - Seja paciente e compreensivo.
-            - Evite pressionar a criança a responder perguntas que ela não quer responder.
-            - Faça perguntas abertas que permitam que a criança se expresse livremente.
-            - Elogie a criança por sua honestidade.
-            - Ofereça apoio e conforto.
-        """)
-    
     elif view == 'Avaliações 📝':
         def display_panel(user_menu):
             if user_menu == 'IAN':
@@ -2406,19 +2374,19 @@ def main():
 
             col1, col2, col3 = st.columns([1, 1, 1])
             with col1:
-                st.write("Indicadores de Adequação de Nível.")
+                st.write("Indicadores de Adequação de Nível")
                 if st.button("IAN 📝", key='IAN', help="Acesse os questionários da plataforma", use_container_width=True):
                     session_state.user_menu = 'IAN'
                     st.rerun()
 
             with col2:
-                st.write("Indicadores de Engajamento.")
+                st.write("Indicadores de Engajamento")
                 if st.button("IEG 📝", key='IEG', help="Acesse os questionários da plataforma", use_container_width=True):
                     session_state.user_menu = 'IEG'
                     st.rerun()
             
             with col3:
-                st.write("Indicador de AutoAvaliação.")
+                st.write("Indicador de AutoAvaliação")
                 if st.button("IAA 📝", key='IAA', help="Acesse os questionários da plataforma", use_container_width=True):
                     session_state.user_menu = 'IAA'
                     st.rerun()
@@ -2426,7 +2394,7 @@ def main():
 
             col7, col8 = st.columns([1, 2])
             with col7:
-                st.write("Indicador de Desenvolvimento Academico")
+                st.write("Indicador de Desenvolvimento Acadêmico")
                 if st.button("IDA 📝", key='IDA', help="Acesse os questionários da plataforma", use_container_width=True):
                     session_state.user_menu = 'IDA'
                     st.rerun()
